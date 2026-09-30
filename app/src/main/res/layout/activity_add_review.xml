@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rl_addReview_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:paddingLeft="@dimen/registration_margin_small"
+    android:paddingRight="@dimen/registration_margin_small">
+
+    <RelativeLayout
+        android:id="@+id/rl_addReview_header"
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize">
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="@dimen/app_base_margin_10dp"
+            android:layout_marginRight="@dimen/app_base_margin_20dp"
+            android:layout_toRightOf="@+id/tvCancel"
+            android:ellipsize="end"
+            android:fontFamily="@font/regular"
+            android:gravity="center_horizontal"
+            android:singleLine="true"
+            android:text="RESTAURANT NAME"
+            android:textColor="@color/navigationBarColor"
+            android:textSize="@dimen/text_9pt" />
+
+        <TextView
+            android:id="@+id/tvCancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:fontFamily="@font/regular"
+            android:paddingLeft="@dimen/login_cancel_margin"
+            android:paddingTop="@dimen/app_base_margin_10dp"
+            android:paddingRight="@dimen/app_base_margin_10dp"
+            android:paddingBottom="@dimen/app_base_margin_10dp"
+            android:text="X"
+            android:textColor="@color/loginCancel_green"
+            android:textSize="@dimen/sz_login_text_header" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_below="@+id/tvCancel"
+            android:background="@color/beforeLogin_text_color" />
+
+    </RelativeLayout>
+
+
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_below="@+id/rl_addReview_header"
+        android:layout_above="@+id/tv_buttonPublish"
+        android:layout_marginBottom="@dimen/_20sdp"
+        android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/rl_addReview_header"
+        android:layout_alignLeft="@+id/rl_addReview_header"
+        android:layout_alignRight="@+id/rl_addReview_header">
+
+
+        <TextView
+            android:id="@+id/tv_addReview_tag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/app_base_margin_10dp"
+            android:fontFamily="@font/regular"
+            android:text="RATE AND REVIEW"
+            android:textColor="@color/common_google_signin_btn_text_dark_focused"
+            android:textSize="@dimen/text_9pt" />
+
+        <RelativeLayout
+            android:id="@+id/rlRating"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_addReview_tag"
+            android:layout_marginTop="@dimen/app_base_margin_10dp"
+            android:orientation="horizontal">
+
+            <RatingBar
+                android:id="@+id/ratingbar_addReview"
+                style="@style/CustomRatingBarGold"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/ratingbar_maxHeight"
+                android:numStars="5"
+                android:stepSize="0.5"
+                android:visibility="visible" />
+
+            <TextView
+                android:id="@+id/tv_addReview_rating"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:fontFamily="@font/regular"
+                android:gravity="bottom|center"
+                android:text="0.0"
+                android:textColor="@color/common_google_signin_btn_text_dark_focused"
+                android:textSize="@dimen/large_text_size" />
+
+        </RelativeLayout>
+
+
+        <View
+            android:id="@+id/line_below_ratingbar"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/rlRating"
+            android:layout_marginTop="@dimen/app_base_margin_10dp"
+            android:background="@color/beforeLogin_text_color" />
+
+        <TextView
+            android:id="@+id/tv_wordlimit_tag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/line_below_ratingbar"
+            android:layout_alignParentLeft="true"
+            android:layout_marginTop="@dimen/app_base_margin_20dp"
+            android:fontFamily="@font/regular"
+            android:text="@string/add_review_wordLimit_note"
+            android:textColor="@color/edittext_line_color"
+            android:textSize="@dimen/text_11pt" />
+
+        <EditText
+            android:id="@+id/et_addReview_details"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_below="@+id/tv_wordlimit_tag"
+            android:layout_marginTop="@dimen/app_base_margin_10dp"
+            android:background="@drawable/review_edittext_bg"
+            android:gravity="top"
+            android:maxLength="120"
+            android:padding="@dimen/app_base_margin_5dp"
+
+            android:textColor="@color/common_google_signin_btn_text_dark_focused"
+            android:textColorHint="@color/common_google_signin_btn_text_dark_focused"
+            android:textSize="@dimen/text_11pt" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:id="@+id/llone"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/et_addReview_details"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="@dimen/app_base_margin_10dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_addReview_charCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/regular"
+                android:gravity="bottom"
+
+                android:text="0"
+                android:textColor="@color/edittext_line_color"
+                android:textSize="@dimen/text_11pt" />
+
+            <TextView
+                android:id="@+id/tv_addReview_charCountMax"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/regular"
+                android:gravity="bottom"
+                android:text="/120"
+                android:textColor="@color/edittext_line_color"
+                android:textSize="@dimen/text_11pt" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvAddPhoto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/app_base_margin_20dp"
+            android:fontFamily="@font/regular"
+            android:layout_below="@+id/llone"
+            android:text="ADD PHOTOS"
+            android:textColor="@color/common_google_signin_btn_text_dark_focused"
+            android:textSize="@dimen/text_9pt" />
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/app_base_margin_10dp"
+            android:layout_below="@+id/tvAddPhoto"
+            android:orientation="horizontal">
+            <RelativeLayout
+                android:layout_width="100dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:id="@+id/rlAdd"
+                android:background="@drawable/dotted_rectangle_bg"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_height="120dp">
+                <ImageView
+                    android:id="@+id/featuredImgUploadIcon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_margin="@dimen/_5sdp"
+                    android:layout_centerInParent="true"
+
+                    android:layout_marginHorizontal="@dimen/_5sdp"
+                    android:padding="@dimen/_11sdp"
+                    android:src="@drawable/ic_add_photo"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </RelativeLayout>
+
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/imagesRecyclerView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/app_base_margin_10dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toRightOf="@+id/rlAdd"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </RelativeLayout>
+
+
+    </androidx.core.widget.NestedScrollView>
+
+
+    <TextView
+        android:id="@+id/tv_buttonPublish"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/app_base_margin_20dp"
+        android:background="@drawable/green_big_button"
+        android:fontFamily="@font/regular"
+        android:gravity="center"
+        android:text="Publish"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_11pt" />
+
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:layout_centerInParent="true" />
+</RelativeLayout>

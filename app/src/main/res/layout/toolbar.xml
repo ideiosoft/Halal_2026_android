@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/toolbar"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#ffffff"
+
+    app:contentInsetLeft="0dp"
+    app:contentInsetStart="0dp">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+android:layout_marginTop="@dimen/_25sdp"
+        android:layout_marginBottom="@dimen/_20sdp"
+        android:layout_height="wrap_content">
+
+
+
+        <ImageView
+            android:id="@+id/toolbar_tag_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:layout_marginRight="@dimen/_10sdp"
+            android:src="@drawable/nav_bar_take_away_icon"
+            android:visibility="gone" />
+
+
+        <ImageView
+            android:id="@+id/toolbar_search_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:layout_marginRight="@dimen/app_base_margin_10dp"
+            android:src="@drawable/green_search"
+            android:visibility="invisible" />
+
+        <ImageView
+            android:id="@+id/toolbar_share_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:layout_marginRight="@dimen/app_base_margin_10dp"
+            android:src="@drawable/share"
+            android:visibility="invisible" />
+
+        <ImageView
+            android:id="@+id/toolbar_tag_icon_right"
+            android:layout_width="@dimen/_50sdp"
+            android:layout_height="@dimen/_50sdp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="@dimen/_15sdp"
+            android:layout_marginRight="@dimen/_10sdp"
+            android:layout_centerVertical="true"
+            android:layout_gravity="left"
+            android:src="@drawable/app_logo" />
+
+        <TextView
+            android:id="@+id/tvAddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/_15sdp"
+            android:layout_toRightOf="@+id/toolbar_tag_icon_right"
+            android:background="@drawable/btn_bg_round"
+            android:backgroundTint="@color/gray"
+            android:drawableStart="@drawable/ic_room_black_24dp"
+            android:drawableLeft="@drawable/ic_room_black_24dp"
+            android:drawableEnd="@drawable/ic_arrow_drop_down_black_24dp"
+            android:drawableRight="@drawable/ic_arrow_drop_down_black_24dp"
+            android:drawablePadding="10sp"
+            android:ellipsize="end"
+            android:fontFamily="@font/regular"
+            android:hint="Select Address.."
+            android:paddingHorizontal="@dimen/_5sdp"
+            android:paddingVertical="@dimen/_5sdp"
+            android:singleLine="true"
+            android:text="Search Place"
+            android:textAllCaps="false"
+            android:textColor="@color/navigationBarColor"
+            android:textColorHint="@android:color/darker_gray"
+            android:textSize="@dimen/text_11pt" />
+
+
+    </RelativeLayout>
+</androidx.appcompat.widget.Toolbar>

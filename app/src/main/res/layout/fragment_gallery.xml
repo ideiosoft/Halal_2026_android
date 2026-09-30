@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    android:paddingTop="@dimen/_10sdp"
+    android:layout_height="match_parent"
+    tools:context=".Fragment.OfferFragment">
+
+   <androidx.recyclerview.widget.RecyclerView
+       android:layout_width="match_parent"
+       android:id="@+id/rvGallery"
+       android:layout_above="@+id/adViewSection"
+        android:layout_height="match_parent"/>
+
+   <TextView
+       android:id="@+id/tvNoRecord"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:visibility="gone"
+       android:fontFamily="@font/regular"
+       android:singleLine="true"
+       android:text="@string/gallery_not_available"
+       android:gravity="center"
+       android:layout_centerInParent="true"
+        android:textColor="@color/black"
+       android:textSize="@dimen/text_9pt" />
+
+   <ProgressBar
+       android:id="@+id/progressBar"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_marginVertical="@dimen/_40sdp"
+       android:visibility="gone"
+       android:layout_centerInParent="true" />
+
+</RelativeLayout>

@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/toolbar"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#ffffff"
+    android:contentInsetStart="0dp"
+    android:contentInsetLeft="0dp"
+    app:contentInsetLeft="0dp"
+    app:contentInsetStart="0dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/toolbar_header_name2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/toolbar_header_name"
+            android:layout_marginLeft="32sp"
+            android:layout_marginTop="5dp"
+            android:layout_toStartOf="@+id/toolbar_tag_icon_end"
+            android:layout_toLeftOf="@+id/toolbar_tag_icon_end"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text="RESTAURANTS"
+            android:fontFamily="@font/regular"
+            android:textColor="@color/beforeLogin_text_color"
+            android:textSize="@dimen/sz_50px"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/toolbar_tag_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:layout_marginRight="@dimen/app_base_margin_10dp"
+            android:src="@drawable/nav_bar_take_away_icon"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tv_filtre"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:layout_marginRight="@dimen/app_base_margin_10dp"
+            android:text="Filter"
+            android:fontFamily="@font/regular"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/toolbar_search_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:layout_marginRight="@dimen/app_base_margin_10dp"
+            android:src="@drawable/green_search"
+            android:visibility="invisible" />
+
+        <ImageView
+            android:id="@+id/toolbar_share_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:layout_marginRight="@dimen/app_base_margin_10dp"
+            android:src="@drawable/share"
+            android:visibility="invisible" />
+
+        <TextView
+            android:id="@+id/toolbar_tv_add"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:layout_marginEnd="20dp"
+            android:layout_marginRight="@dimen/app_base_margin_10dp"
+            android:text="Add"
+            android:fontFamily="@font/regular"
+            android:textColor="@color/textColorPrimary"
+            android:textSize="@dimen/sz_login_text_header"
+            android:visibility="invisible" />
+
+        <TextView
+            android:id="@+id/toolbar_header_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toStartOf="@+id/toolbar_tag_icon_end"
+            android:layout_toLeftOf="@+id/toolbar_tag_icon_end"
+            android:drawableStart="@drawable/ic_room_black_24dp"
+            android:drawableLeft="@drawable/ic_room_black_24dp"
+            android:drawableEnd="@drawable/ic_arrow_drop_down_black_24dp"
+            android:drawableRight="@drawable/ic_arrow_drop_down_black_24dp"
+            android:drawablePadding="10sp"
+            android:ellipsize="end"
+            android:fontFamily="@font/regular"
+            android:hint="Select Address.."
+            android:singleLine="true"
+            android:text="Search Place"
+            android:textAllCaps="false"
+            android:textColor="@color/navigationBarColor"
+            android:textColorHint="@android:color/darker_gray"
+ android:textSize="@dimen/text_11pt"/>
+    </RelativeLayout>
+</androidx.appcompat.widget.Toolbar>

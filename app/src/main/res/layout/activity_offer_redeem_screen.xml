@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/gray"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.OfferRedeemScreen">
+    <View
+        android:layout_width="match_parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:id="@+id/viewone"
+        android:background="@color/colorPrimary"
+        android:layout_height="1dp"/>
+
+
+    <RelativeLayout
+        android:id="@+id/rl_registration_header"
+        android:layout_width="match_parent"
+        android:background="@color/gray"
+        app:layout_constraintTop_toBottomOf="@+id/viewone"
+        android:layout_height="?android:attr/actionBarSize">
+
+
+        <TextView
+            android:id="@+id/tv_reg_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:fontFamily="@font/bold"
+            android:padding="@dimen/_12sdp"
+            android:text="X"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sz_login_text_header" />
+
+    </RelativeLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        app:layout_constraintTop_toBottomOf="@+id/rl_registration_header"
+android:fillViewport="true"
+        android:scrollbars="none"
+android:background="@color/gray"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_height="0dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/_80sdp"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/tv_offer_heading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:layout_gravity="center"
+            android:fontFamily="@font/bold"
+            android:maxLines="1"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:textSize="@dimen/_30sdp"
+            android:gravity="center"
+             android:text=""
+            android:textColor="@color/colorPrimary"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_login_header"
+            android:layout_centerInParent="true"
+            android:fontFamily="@font/regular"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:text="N/A"
+            android:id="@+id/tvDes"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_11pt" />
+        <View
+            android:layout_width="match_parent"
+            android:background="@color/edittext_line_color"
+            android:layout_marginHorizontal="@dimen/_30sdp"
+            android:layout_marginVertical="@dimen/_20sdp"
+            android:layout_height="1dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_login_header"
+            android:layout_centerInParent="true"
+            android:fontFamily="@font/bold"
+            android:gravity="center"
+            android:id="@+id/tvRestName"
+            android:layout_gravity="center"
+            android:text="Restaurant Name"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_11pt" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:padding="@dimen/_10sdp"
+            android:layout_marginHorizontal="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:background="@drawable/rectangular_green_border_white_bg"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                 android:layout_centerInParent="true"
+                android:fontFamily="@font/bold"
+                 android:text="How to redeem: "
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/text_11pt" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_login_header"
+                    android:layout_centerInParent="true"
+
+                    android:id="@+id/tvRedeemSteps"
+                    android:fontFamily="@font/regular"
+                    android:text="  "
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_8pt" />
+
+
+
+
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/edName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:background="@drawable/edittextbg"
+            android:backgroundTint="@color/white"
+            android:layout_marginHorizontal="@dimen/_20sdp"
+            android:fontFamily="@font/regular"
+            android:hint="@string/text_name"
+            android:inputType="text"
+            android:padding="@dimen/_10sdp"
+            android:textColorHint="@color/d_grey"
+            android:singleLine="true"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_11pt" />
+        <EditText
+            android:id="@+id/edEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:background="@drawable/edittextbg"
+            android:backgroundTint="@color/white"
+            android:layout_marginHorizontal="@dimen/_20sdp"
+            android:fontFamily="@font/regular"
+            android:hint="@string/email"
+            android:inputType="textEmailAddress"
+            android:padding="@dimen/_10sdp"
+            android:textColorHint="@color/d_grey"
+            android:singleLine="true"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_11pt" />
+
+        <EditText
+            android:id="@+id/edPhone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+android:maxLength="14"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:background="@drawable/edittextbg"
+            android:backgroundTint="@color/white"
+            android:layout_marginHorizontal="@dimen/_20sdp"
+            android:fontFamily="@font/regular"
+            android:hint="Phone"
+            android:inputType="phone"
+            android:padding="@dimen/_10sdp"
+            android:textColorHint="@color/d_grey"
+            android:singleLine="true"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_11pt" />
+
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Redeem"
+            android:id="@+id/tvRedeem"
+            android:background="@drawable/btn_bg_round"
+            android:backgroundTint="@color/colorPrimary"
+            android:fontFamily="@font/bold"
+            android:layout_marginTop="@dimen/_30sdp"
+            android:paddingVertical="@dimen/_10sdp"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:textSize="@dimen/text_8pt"
+android:layout_marginHorizontal="@dimen/_20sdp"
+            android:textColor="@color/white"
+            android:layout_centerInParent="true"
+            />
+    </LinearLayout>
+
+
+    </ScrollView>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:layout_centerInParent="true" />
+</androidx.constraintlayout.widget.ConstraintLayout>

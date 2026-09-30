@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?attr/selectableItemBackground">
+
+    <RelativeLayout
+        android:id="@+id/rl_navigation_row"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="24dp"
+        android:paddingVertical="16dp">
+
+        <ImageView
+            android:id="@+id/iv_nav_list_row"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/home_new"
+            app:tint="@color/black"
+            xmlns:app="http://schemas.android.com/apk/res-auto" />
+
+        <TextView
+            android:id="@+id/tv_nav_list_row"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:fontFamily="@font/med"
+            android:layout_toRightOf="@+id/iv_nav_list_row"
+            android:textSize="16sp"
+            android:text="Menu Item"
+            android:textColor="@color/black" />
+
+        <ImageView
+            android:id="@+id/iv_right_arrow"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/right_arrow"
+            android:visibility="gone"
+            app:tint="@color/d_grey"
+            xmlns:app="http://schemas.android.com/apk/res-auto" />
+
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/separator_view"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/rl_navigation_row"
+        android:layout_marginHorizontal="24dp"
+        android:background="#F0F0F0"
+        android:visibility="gone" />
+
+</RelativeLayout>

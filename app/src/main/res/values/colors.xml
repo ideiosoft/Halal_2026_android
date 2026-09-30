@@ -1,0 +1,45 @@
+<resources>
+
+    <!--
+        Check Android Theme colors for color reference:
+        https://developer.android.com/training/material/images/ThemeColors.png
+
+        Refer also to Color palette for the UI colors you should use:
+        http://www.google.com/design/spec/style/color.html#color-ui-color-palette
+    -->
+
+    <color name="colorPrimary">#00BA00</color>
+    <color name="colorPrimaryDark">#00BA00</color>
+    <color name="textColorPrimary">#e74c3c</color>
+    <color name="windowBackground">#FFFFFF</color>
+    <color name="navigationBarColor">#000000</color>
+    <color name="colorAccent">#2EC430</color>
+    <color name="color_accent_2">#00BA00</color>
+    <color name="d_grey">#707070</color>
+    <color name="selected_grey">#e3e3e3</color>
+
+    <color name="blue">#00abea</color>
+    <color name="white">#ffffff</color>
+    <color name="black">#000000</color>
+    <color name="whitetrans">#80ffffff</color>
+    <color name="myPrimaryColor">#e67e22</color>
+    <color name="myPrimaryDarkColor">#3F51B5</color>
+    <color name="myAccentColor">#3F51B5</color>
+    <color name="myDrawerBackground">#F2F2F2</color>
+    <color name="myWindowBackground">#DEDEDE</color>
+    <color name="myTextPrimaryColor">#FFFFFF</color>
+    <color name="myNavigationColor">#000000</color>
+    <!--<color name="actionbar_bg">#f8166f2a</color>-->
+    <color name="actionbar_bg">#004D40</color>
+    <color name="selected_gray">#ffdbdbdb</color>
+    <color name="actionText">#263238</color>
+    <color name="newCcolor">#1C944E</color>
+    <color name="loginCancel_green">#2EC430</color>
+    <color name="beforeLogin_text_color">#bbbaba</color>
+    <color name="gray">#eeeeee</color>
+     <color name="text_color_red">#ff0000</color>
+    <color name="details_bg_color">#d7d7d7</color>
+
+     <color name="edittext_line_color">#acacac</color>
+     <color name="view_voucher_text_clr">#595959</color>
+</resources>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:id="@+id/clParent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_gravity=""
+    android:layout_marginHorizontal="@dimen/_15sdp"
+    android:layout_marginVertical="@dimen/_5sdp">
+
+    <ImageView
+        android:id="@+id/ivCatimage"
+        android:layout_width="100px"
+        android:layout_height="100px"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/cheeseburger"
+        app:layout_constraintLeft_toLeftOf="@+id/tvName"
+        app:layout_constraintRight_toRightOf="@+id/tvName"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/tvNew"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ivCatimage"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="-15dp"
+        android:background="@drawable/btn_bg_round_green"
+        android:fontFamily="@font/regular"
+        android:paddingHorizontal="@dimen/_10sdp"
+        android:paddingVertical="@dimen/_4sdp"
+        android:text="New"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/text_7pt"
+        android:textStyle="normal"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/ivCatimage"
+        app:layout_constraintLeft_toLeftOf="@+id/ivCatimage"
+        app:layout_constraintRight_toRightOf="@+id/ivCatimage" />
+
+    <TextView
+        android:id="@+id/tvName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvNew"
+        android:layout_centerInParent="true"
+         android:fontFamily="@font/regular"
+         android:textColor="@android:color/black"
+
+android:text=""
+        android:textSize="@dimen/text_9pt"
+        android:textStyle="normal"
+
+       app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivCatimage" />
+</RelativeLayout>

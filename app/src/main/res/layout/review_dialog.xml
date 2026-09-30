@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+android:layout_marginTop="@dimen/_16sdp"
+        android:background="@drawable/rounded_corner_white_bg"
+android:layout_marginBottom="@dimen/_10sdp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Enjoying the Halal Advisor App?"
+            android:textAlignment="center"
+            android:textSize="@dimen/_13sdp"
+            android:textColor="@color/black"
+            android:layout_marginTop="25dp"
+            android:fontFamily="@font/bold"
+     />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/regular"
+            android:lineSpacingExtra="2dp"
+            android:layout_marginTop="25dp"
+android:textColor="#828486"
+            android:textSize="@dimen/_11sdp"
+            android:text="Here at Halal Advisor, feedback is \nvery important to us. We'd love to get your \nhonest opinion by taking a moment to \nleave us a review.\n\nWe thank you in advance!\nMay Allah bring peace and blessings upon you."
+            android:textAlignment="center"
+            />
+        <Button
+            android:id="@+id/buttonOk"
+            android:layout_width="match_parent"
+            android:fontFamily="@font/regular"
+            android:layout_height="45dp"
+            android:layout_gravity="center"
+            android:layout_marginHorizontal="@dimen/_50sdp"
+            android:textSize="@dimen/_11sdp"
+            android:textAllCaps="false"
+            android:layout_marginTop="25dp"
+            android:background="@drawable/btn_bg_round"
+            android:backgroundTint="@color/colorPrimary"
+            android:text="Review"
+            android:textColor="#FFF" />
+        <TextView
+            android:id="@+id/noThanksTxt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/regular"
+            android:textSize="@dimen/_11sdp"
+            android:textColor="#828486"
+            android:layout_marginTop="25dp"
+            android:text="No, Thanks!"
+            android:textAlignment="center"
+ />
+
+    </LinearLayout>
+    <ImageView
+        android:layout_width="wrap_content"
+        android:src="@drawable/ratings"
+        android:layout_height="@dimen/_35sdp"/>
+</RelativeLayout>

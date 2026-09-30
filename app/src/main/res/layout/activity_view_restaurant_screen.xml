@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+
+
+    android:layout_height="match_parent">
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:orientation="vertical"
+        android:paddingHorizontal="@dimen/_10sdp"
+        android:paddingTop="@dimen/_10sdp"
+
+        android:paddingBottom="@dimen/_30sdp"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <ImageView
+            android:id="@+id/ivClose"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/close_voucher"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <ImageView
+            android:id="@+id/iv_loader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:src="@drawable/view_voucher_img"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_offer_heading"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_10sdp"
+            android:ellipsize="end"
+            android:fontFamily="@font/bold"
+            android:gravity="center"
+            android:maxLines="1"
+            android:text="25% Off"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/text_12pt" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginHorizontal="@dimen/_10sdp"
+            android:layout_marginStart="@dimen/_4sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_marginEnd="@dimen/_4sdp"
+            android:fontFamily="@font/regular"
+            android:gravity="center"
+            android:text="your entire bill at"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_11pt"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/iv_loader" />
+
+        <TextView
+            android:id="@+id/tv_main"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="@dimen/_4sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_marginEnd="@dimen/_4sdp"
+            android:fontFamily="@font/bold"
+            android:gravity="center"
+            android:text="Restaurant Name"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_11pt"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/iv_loader" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:background="@drawable/ic_bg"
+            android:orientation="vertical"
+            android:paddingVertical="@dimen/_5sdp">
+
+            <TextView
+                android:id="@+id/tv_loading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="@dimen/_4sdp"
+                android:layout_marginEnd="@dimen/_4sdp"
+                android:drawableLeft="@drawable/ic_info"
+                android:drawablePadding="@dimen/app_base_margin_5dp"
+                android:fontFamily="@font/regular"
+                android:gravity="center"
+                android:lineSpacingExtra="1dp"
+                android:text="Present the voucher to the venue upon "
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_6pt"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_main" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="@dimen/_4sdp"
+                android:layout_marginEnd="@dimen/_4sdp"
+                android:fontFamily="@font/regular"
+                android:gravity="center"
+                android:lineSpacingExtra="1dp"
+                android:text="payment to receive the % of the bill."
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_6pt"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_main" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvCall"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_30sdp"
+            android:layout_marginTop="@dimen/_30sdp"
+            android:background="@drawable/redeem_bg"
+            android:backgroundTint="@color/black"
+            android:fontFamily="@font/med"
+            android:gravity="center"
+            android:paddingVertical="@dimen/_8sdp"
+            android:text="Call Restaurant"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_6pt" />
+
+        <TextView
+            android:id="@+id/tvMenu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_30sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:background="@drawable/redeem_bg"
+            android:backgroundTint="@color/black"
+            android:fontFamily="@font/med"
+            android:gravity="center"
+            android:paddingVertical="@dimen/_8sdp"
+            android:text="View menu"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_6pt" />
+
+        <TextView
+            android:id="@+id/tvLocate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_30sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:background="@drawable/redeem_bg"
+            android:backgroundTint="@color/black"
+            android:fontFamily="@font/med"
+            android:gravity="center"
+            android:paddingVertical="@dimen/_8sdp"
+            android:text="Locate Restaurant"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_6pt" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginHorizontal="@dimen/_10sdp"
+            android:layout_marginStart="@dimen/_4sdp"
+            android:layout_marginTop="@dimen/_30sdp"
+            android:layout_marginEnd="@dimen/_4sdp"
+            android:drawablePadding="@dimen/app_base_margin_5dp"
+            android:id="@+id/tvValidity"
+            android:fontFamily="@font/regular"
+            android:gravity="center"
+            android:lineSpacingExtra="1dp"
+            android:text="The voucher is valid till "
+            android:textColor="@color/view_voucher_text_clr"
+            android:textSize="@dimen/text_6pt"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_main" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginHorizontal="@dimen/_10sdp"
+            android:layout_marginStart="@dimen/_4sdp"
+            android:layout_marginEnd="@dimen/_4sdp"
+            android:drawablePadding="@dimen/app_base_margin_5dp"
+            android:fontFamily="@font/regular"
+            android:gravity="center"
+            android:lineSpacingExtra="1dp"
+            android:text="Discount is restaurant-wise. May not be valid"
+            android:textColor="@color/view_voucher_text_clr"
+            android:textSize="@dimen/text_6pt"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_main" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginHorizontal="@dimen/_10sdp"
+            android:layout_marginStart="@dimen/_4sdp"
+            android:layout_marginEnd="@dimen/_4sdp"
+            android:id="@+id/tvMinimumSpend"
+            android:drawablePadding="@dimen/app_base_margin_5dp"
+            android:fontFamily="@font/regular"
+            android:gravity="center"
+            android:lineSpacingExtra="1dp"
+            android:text="in conjunction with other offers."
+            android:textColor="@color/view_voucher_text_clr"
+            android:textSize="@dimen/text_6pt"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_main" />
+
+
+    </LinearLayout>
+
+
+</ScrollView>

@@ -1,0 +1,378 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rl_registration_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fillViewport="true"
+        android:scrollbars="none">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:id="@+id/rl_registration_regular"
+                android:layout_width="match_parent"
+                android:layout_height="?android:attr/actionBarSize">
+
+                <TextView
+                    android:id="@+id/tv_reg_cancel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:fontFamily="@font/bold"
+                    android:padding="@dimen/_12sdp"
+                    android:text="X"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_21" />
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/salam_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rl_registration_regular">
+
+                <ImageView
+                    android:id="@+id/ivLogo"
+                    android:layout_width="@dimen/_100sdp"
+                    android:layout_height="@dimen/_100sdp"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerInParent="true"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:src="@drawable/app_logo" />
+
+                <TextView
+                    android:id="@+id/tv_registration_regular"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/ivLogo"
+                    android:fontFamily="@font/extrabold"
+                    android:gravity="center"
+
+                    android:text="@string/salam"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_36sdp" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_registration_regular"
+                    android:layout_centerInParent="true"
+                    android:fontFamily="@font/bold"
+                    android:text="@string/regist_request"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_12pt" />
+
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/rl_registration_field"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/salam_layout"
+                android:paddingHorizontal="@dimen/_30sdp"
+                android:paddingVertical="@dimen/_10sdp">
+
+
+                <LinearLayout
+
+                    android:id="@+id/layout_edit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/sociallogin"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:orientation="vertical">
+
+
+                    <EditText
+                        android:id="@+id/et_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tv_registration_email"
+                        android:layout_alignLeft="@+id/iv_google_registration"
+                        android:layout_alignRight="@+id/iv_google_registration"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:background="@drawable/edittextbg"
+                        android:fontFamily="@font/regular"
+                        android:hint="@string/text_name"
+                        android:inputType="text"
+                        android:padding="@dimen/_10sdp"
+                        android:singleLine="true"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_11pt" />
+
+                    <EditText
+                        android:id="@+id/et_email"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/et_name"
+                        android:layout_alignLeft="@+id/iv_google_registration"
+                        android:layout_alignRight="@+id/iv_google_registration"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:background="@drawable/edittextbg"
+                        android:fontFamily="@font/regular"
+                        android:hint="@string/text_email"
+                        android:inputType="textEmailAddress"
+                        android:padding="@dimen/_10sdp"
+                        android:singleLine="true"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_11pt" />
+
+                    <EditText
+                        android:id="@+id/et_password"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/et_email"
+                        android:layout_alignLeft="@+id/iv_google_registration"
+                        android:layout_alignRight="@+id/iv_google_registration"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:layout_marginBottom="@dimen/registration_margin_small"
+                        android:background="@drawable/edittextbg"
+                        android:fontFamily="@font/regular"
+                        android:hint="@string/text_password"
+                        android:inputType="textPassword"
+                        android:padding="@dimen/_10sdp"
+                        android:singleLine="true"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_11pt" />
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/layout_edit"
+                    android:orientation="vertical">
+
+
+                    <TextView
+                        android:id="@+id/iv_btnRegistration"
+                        android:layout_width="match_parent"
+                        android:layout_height="?actionBarSize"
+                        android:layout_below="@+id/et_password"
+                        android:layout_alignLeft="@+id/iv_google_registration"
+                        android:layout_alignRight="@+id/iv_google_registration"
+                        android:layout_centerHorizontal="true"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/registration_margin_small"
+                        android:background="@drawable/btn_bg_round"
+                        android:backgroundTint="@color/colorPrimary"
+                        android:fontFamily="@font/regular"
+                        android:gravity="center"
+                        android:text="@string/text_signup"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/text_11pt"
+                        android:textStyle="bold" />
+                    <LinearLayout
+
+                        android:id="@+id/sociallogin"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/iv_fb_registration"
+                            android:layout_width="match_parent"
+                            android:layout_height="?actionBarSize"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:background="@drawable/btn_bg_round"
+                            android:fontFamily="@font/regular"
+                            android:gravity="center"
+                            android:text="@string/signup_with_fb"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/text_11pt"
+                            android:visibility="gone" />
+
+                        <TextView
+                            android:id="@+id/iv_google_registration"
+                            android:layout_width="match_parent"
+                            android:layout_height="?actionBarSize"
+                            android:layout_below="@+id/iv_fb_registration"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="@dimen/registration_margin_mid"
+                            android:layout_marginBottom="@dimen/registration_margin_small"
+                            android:background="@drawable/btn_bg_round"
+                            android:backgroundTint="@color/textColorPrimary"
+                            android:fontFamily="@font/regular"
+                            android:gravity="center"
+                            android:text="@string/signup_with_google"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/text_11pt" />
+
+
+                        <TextView
+                            android:visibility="gone"
+                            android:id="@+id/tv_registration_email"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/iv_google_registration"
+                            android:layout_alignLeft="@+id/iv_google_registration"
+                            android:layout_alignRight="@+id/iv_google_registration"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:fontFamily="@font/regular"
+                            android:text="@string/signup_using_email"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/text_11pt" />
+
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/iv_btnRegistration"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_gravity="center"
+
+
+                            android:fontFamily="@font/regular"
+                            android:text="@string/text_already_account"
+                            android:textColor="@color/black"
+                            android:textColorHint="@color/navigationBarColor"
+                            android:textSize="@dimen/text_11pt" />
+
+
+                        <TextView
+                            android:id="@+id/tv_already_member"
+                            android:layout_width="match_parent"
+                            android:layout_height="?actionBarSize"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:background="@drawable/btn_bg_round"
+                            android:backgroundTint="@color/black"
+                            android:fontFamily="@font/regular"
+                            android:gravity="center"
+                            android:text="@string/text_login"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/text_11pt" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:fontFamily="@font/regular"
+                            android:text="By signing up, you agree to our"
+                            android:textColor="@color/d_grey"
+                            android:textColorHint="@color/navigationBarColor"
+                            android:textSize="@dimen/text_9pt" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:id="@+id/tvTerms"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/regular"
+                                    android:text="@string/terms_of_use"
+                                    android:textSize="@dimen/text_9pt"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent" />
+
+                                <View
+                                    android:layout_width="0dp"
+                                    android:layout_height="1dp"
+                                    android:background="@color/colorPrimary"
+                                    app:layout_constraintEnd_toEndOf="@id/tvTerms"
+                                    app:layout_constraintStart_toStartOf="@id/tvTerms"
+                                    app:layout_constraintTop_toBottomOf="@id/tvTerms" />
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:layout_gravity="center"
+                                android:fontFamily="@font/regular"
+                                android:text=" and "
+                                android:textColor="@color/d_grey"
+                                android:textColorHint="@color/navigationBarColor"
+                                android:textSize="@dimen/text_9pt" />
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+
+
+                                    android:id="@+id/tvPrivacy"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_gravity="center"
+                                    android:fontFamily="@font/regular"
+                                    android:text="Privacy Policy"
+                                    android:textColor="@color/d_grey"
+                                    android:textColorHint="@color/navigationBarColor"
+                                    android:textSize="@dimen/text_9pt"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent" />
+
+                                <View
+                                    android:layout_width="0dp"
+                                    android:layout_height="1dp"
+                                    android:background="@color/colorPrimary"
+                                    app:layout_constraintEnd_toEndOf="@id/tvPrivacy"
+                                    app:layout_constraintStart_toStartOf="@id/tvPrivacy"
+                                    app:layout_constraintTop_toBottomOf="@id/tvPrivacy" />
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+
+</RelativeLayout>

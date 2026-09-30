@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/app_base_margin_5dp"
+    android:background="#FFF">
+
+    <TextView
+        android:id="@+id/headerchangepassword"
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:singleLine="true"
+        android:fontFamily="@font/regular"
+        android:textAllCaps="true"
+        android:textSize="@dimen/text_9pt"
+        android:text="@string/forgot_pass_header"
+        android:textColor="@color/navigationBarColor"
+         />
+
+    <View
+        android:id="@+id/separator_view_forgot_pass"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/headerchangepassword"
+        android:layout_marginBottom="@dimen/app_base_margin_15dp"
+        android:background="@color/beforeLogin_text_color" />
+
+    <TextView
+        android:id="@+id/tv_forgot_pass_subhead"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/separator_view_forgot_pass"
+        android:layout_alignLeft="@+id/headerchangepassword"
+        android:layout_alignRight="@+id/headerchangepassword"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="@dimen/app_base_margin_5dp"
+        android:fontFamily="@font/regular"
+
+        android:textSize="@dimen/text_11pt"
+        android:layout_marginRight="@dimen/app_base_margin_5dp"
+        android:gravity="center_horizontal"
+        android:text="@string/forgot_pass_subheader"
+        android:textColor="@color/navigationBarColor" />
+
+    <EditText
+        android:id="@+id/etForgotPassEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_forgot_pass_subhead"
+        android:layout_marginLeft="@dimen/app_base_margin_5dp"
+        android:layout_marginTop="@dimen/app_base_margin_10dp"
+        android:layout_marginRight="@dimen/app_base_margin_5dp"
+        android:fontFamily="@font/regular"
+        android:textSize="@dimen/text_11pt"
+        android:ems="6"
+        android:gravity="center_vertical"
+        android:hint="@string/forgot_pass_edittext_hint"
+        android:singleLine="true"
+        android:textColor="@color/navigationBarColor"
+        android:textColorHint="@color/actionbar_bg" />
+
+    <TextView
+        android:id="@+id/tvSubmit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/etForgotPassEmail"
+        android:layout_alignLeft="@+id/etForgotPassEmail"
+        android:layout_alignRight="@+id/etForgotPassEmail"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/app_base_margin_5dp"
+         android:fontFamily="@font/regular"
+
+        android:textSize="@dimen/text_11pt"
+        android:layout_marginBottom="@dimen/app_base_margin_5dp"
+        android:background="@drawable/green_big_button"
+        android:gravity="center"
+        android:text="@string/reset_password"
+        android:textColor="@color/white"
+       />
+
+</RelativeLayout>

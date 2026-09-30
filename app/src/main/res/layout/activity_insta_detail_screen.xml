@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+<androidx.constraintlayout.widget.ConstraintLayout
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.InstaDetailScreen">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:id="@+id/ivInstaPic"
+        app:layout_constraintTop_toTopOf="parent"
+        android:scaleType="centerCrop"
+        android:layout_height="@dimen/_300sdp"/>
+
+    <ImageView
+        android:id="@+id/ivBack"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_margin="@dimen/_10sdp"
+        android:adjustViewBounds="true"
+        android:scaleType="centerCrop"
+        android:src="@drawable/back_green" />
+
+    <TextView
+        android:id="@+id/tvViewOnInsta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+android:background="@drawable/rounded_corner_grey"
+        app:layout_constraintTop_toBottomOf="@+id/ivInstaPic"
+        android:layout_marginTop="@dimen/_15sdp"
+          android:autoLink="all"
+        android:fontFamily="@font/bold"
+        android:textSize="@dimen/text_6pt"
+        android:paddingHorizontal="@dimen/_18sdp"
+        android:paddingVertical="@dimen/_8sdp"
+        android:text="View on Instagram"
+        android:textColor="@color/navigationBarColor"
+        android:layout_alignParentRight="true"
+        app:layout_constraintLeft_toLeftOf="parent"
+         android:layout_marginLeft="@dimen/_5sdp"
+
+        android:layout_marginBottom="@dimen/app_base_margin_8dp"/>
+
+
+
+    <TextView
+        android:id="@+id/tvPermaLink"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/ivInstaPic"
+        android:layout_marginTop="@dimen/app_base_margin_5dp"
+        android:gravity="left"
+        android:layout_marginVertical="@dimen/_10sdp"
+android:layout_marginHorizontal="@dimen/_5sdp"
+        android:autoLink="all"
+         android:textSize="@dimen/text_8pt"
+         android:text=""
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:visibility="gone"
+        android:textColor="@color/navigationBarColor"
+
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="@dimen/_5sdp"
+        android:layout_marginBottom="@dimen/app_base_margin_8dp"/>
+    <TextView
+        android:id="@+id/tvCaption"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+
+        app:layout_constraintTop_toBottomOf="@+id/tvViewOnInsta"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:gravity="left"
+android:layout_marginHorizontal="@dimen/_5sdp"
+        android:autoLink="all"
+         android:textSize="@dimen/text_8pt"
+        android:text="Caption"
+        android:textColor="@color/navigationBarColor"
+        android:layout_alignParentRight="true"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginRight="@dimen/_5sdp"
+        android:layout_marginBottom="@dimen/app_base_margin_8dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

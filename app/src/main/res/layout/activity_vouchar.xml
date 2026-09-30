@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Activity.VoucharActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize">
+
+            <ImageView
+                android:id="@+id/iv_back"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:padding="@dimen/app_base_margin_15dp"
+                android:src="@drawable/back_green" />
+
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:text="MY VOUCHERS"
+                android:fontFamily="@font/regular"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/text_9pt" />
+
+            <ImageView
+                android:id="@+id/imageView5"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:padding="@dimen/app_base_margin_15dp"
+                android:src="@drawable/back_green"
+                android:visibility="invisible" />
+
+        </RelativeLayout>
+
+
+
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:id="@+id/llredeem"
+                app:layout_constraintTop_toTopOf="parent"
+                android:padding="@dimen/_15sdp"
+
+                android:layout_marginTop="@dimen/_5sdp"
+                android:background="@color/gray"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:fontFamily="@font/bold"
+                    android:text="How to redeem: "
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_9pt" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_login_header"
+                    android:layout_centerInParent="true"
+                    android:id="@+id/tvRedeemSteps"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:fontFamily="@font/regular"
+                    android:text="1. View the redeemed voucher below."
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_9pt" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_login_header"
+                    android:layout_centerInParent="true"
+                    android:fontFamily="@font/regular"
+                    android:layout_marginTop="@dimen/_3sdp"
+                    android:text="2. Order directly with the resturant, over the phone or in-store."
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_9pt" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_login_header"
+                    android:layout_centerInParent="true"
+                    android:fontFamily="@font/regular"
+                    android:layout_marginTop="@dimen/_3sdp"
+                    android:text="3. Present the voucher to the venue upon payment to receive the % off the total bill."
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_9pt" />
+
+
+
+
+            </LinearLayout>
+
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_view"
+            android:layout_width="match_parent"
+            android:layout_marginTop="@dimen/_20sdp"
+             android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_5sdp"
+            app:layout_constraintTop_toBottomOf="@+id/llredeem"
+             tools:listitem="@layout/layout_voucher_single_row"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+    </LinearLayout>
+</layout>

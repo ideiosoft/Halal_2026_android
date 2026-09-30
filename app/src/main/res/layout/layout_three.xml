@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:paddingVertical="@dimen/_10sdp"
+    android:paddingHorizontal="@dimen/_20sdp"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:gravity="center"
+    android:layout_gravity="center"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_centerInParent="true"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="@dimen/_200sdp"
+             android:layout_height="@dimen/_200sdp"
+            android:src="@drawable/onboarding_three"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+             android:padding="@dimen/_10sdp"
+            android:gravity="center"
+             android:layout_marginTop="@dimen/_10sdp"
+             android:layout_gravity="center"
+
+            android:fontFamily="@font/bold"
+            android:textSize="@dimen/text_12pt"
+            android:textColor="@android:color/black"
+             android:text="Search"
+            android:textAlignment="center"/>
+        <TextView
+            android:layout_width="@dimen/_250sdp"
+            android:layout_height="wrap_content"
+
+            android:fontFamily="@font/regular"
+            android:textSize="@dimen/text_11pt"
+             android:gravity="center"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:textColor="@android:color/black"
+          android:text="Australia's largest collection of Halal restaurants and cafes"
+            android:textAlignment="center"/>
+    </LinearLayout>
+
+
+
+</RelativeLayout>

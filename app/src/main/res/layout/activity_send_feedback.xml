@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.SendFeedbackActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <RelativeLayout
+                android:id="@+id/rl_registration_header"
+                android:layout_width="match_parent"
+                android:layout_height="?android:attr/actionBarSize">
+
+
+                <TextView
+                    android:id="@+id/tv_reg_cancel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:fontFamily="@font/bold"
+                    android:padding="@dimen/_12sdp"
+                    android:text="X"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sz_login_text_header" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tvHeading"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rl_registration_header"
+                 android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginHorizontal="@dimen/_30sdp"
+                android:fontFamily="@font/extrabold"
+                 android:text="Feedback"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_36sdp" />
+
+
+
+
+                <LinearLayout
+
+
+                    android:id="@+id/layout_edit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_30sdp"
+                    android:layout_below="@+id/tvHeading"
+
+
+                    android:orientation="vertical">
+
+
+                    <EditText
+                        android:id="@+id/edName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/et_name"
+                        android:layout_alignLeft="@+id/iv_google_registration"
+                        android:layout_alignRight="@+id/iv_google_registration"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="@dimen/registration_margin_small"
+                        android:background="@drawable/edittextbg"
+                        android:backgroundTint="@color/white"
+                        android:fontFamily="@font/regular"
+                        android:hint="@string/full_name"
+                         android:padding="@dimen/_10sdp"
+                        android:inputType="textCapSentences"
+                        android:singleLine="true"
+                        android:textColorHint="@color/d_grey"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_11pt" />
+
+                    <EditText
+                        android:id="@+id/edEmail"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/et_email"
+                        android:layout_alignLeft="@+id/iv_google_registration"
+                        android:layout_alignRight="@+id/iv_google_registration"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:layout_marginBottom="@dimen/registration_margin_small"
+                        android:background="@drawable/edittextbg"
+                        android:fontFamily="@font/regular"
+                        android:hint="@string/email_address"
+                        android:inputType="textEmailAddress"
+                        android:padding="@dimen/_10sdp"
+                        android:textColorHint="@color/d_grey"
+                        android:singleLine="true"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_11pt" />
+ <EditText
+                        android:id="@+id/edFeedback"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/et_email"
+                        android:layout_alignLeft="@+id/iv_google_registration"
+                        android:layout_alignRight="@+id/iv_google_registration"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:layout_marginBottom="@dimen/registration_margin_small"
+                        android:background="@drawable/edittextbg"
+                        android:fontFamily="@font/regular"
+                        android:hint="Your Feedback"
+     android:layout_gravity="start"
+     android:gravity="start"
+
+                         android:padding="@dimen/_10sdp"
+                        android:textColorHint="@color/d_grey"
+     android:minLines="5"
+                          android:textColor="@color/black"
+                        android:textSize="@dimen/text_11pt" />
+
+                    <TextView
+                        android:id="@+id/tvSend"
+                        android:layout_width="match_parent"
+                        android:layout_height="?actionBarSize"
+                        android:layout_below="@+id/et_password"
+                        android:layout_alignLeft="@+id/iv_google_registration"
+                        android:layout_alignRight="@+id/iv_google_registration"
+                        android:layout_centerHorizontal="true"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/_20sdp"
+                        android:background="@drawable/btn_bg_round"
+                        android:backgroundTint="@color/colorPrimary"
+                        android:fontFamily="@font/regular"
+                        android:gravity="center"
+
+                        android:text="@string/send"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/text_11pt" />
+
+                </LinearLayout>
+
+
+
+        </RelativeLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

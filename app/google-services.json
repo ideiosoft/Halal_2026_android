@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "672378645549",
+    "firebase_url": "https://halal-advisor.firebaseio.com",
+    "project_id": "halal-advisor",
+    "storage_bucket": "halal-advisor.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:672378645549:android:880c7ececc9a80ee",
+        "android_client_info": {
+          "package_name": "com.dapl.halaladvisor"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "672378645549-39lar206rmn2h48h9ti1k53f9evli44h.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.dapl.halaladvisor",
+            "certificate_hash": "0e467be3084f2b832194e664fa7c4628cff3a01d"
+          }
+        },
+        {
+          "client_id": "672378645549-mm94751cepbgl4pklicns898h9babtjg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBWrq_tal9s2CQZZqrKfWqaCCs2RAt5biM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "672378645549-mm94751cepbgl4pklicns898h9babtjg.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "672378645549-9fp0vsc04muimqi80nb5r81f35c05qri.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.dapl.halaladvisor"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

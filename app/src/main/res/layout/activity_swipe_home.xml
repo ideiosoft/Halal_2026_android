@@ -1,0 +1,467 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clickable="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:clickable="true"
+
+            tools:context=".Activity.SwipeHomeActivity">
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/header"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <View
+                    android:id="@+id/view"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:background="@color/black"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/imageView6"
+                    android:layout_width="@dimen/_40sdp"
+                    android:layout_height="@dimen/_40sdp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="70dp"
+                    android:elevation="10dp"
+                    android:src="@drawable/ic_profile_placeholder"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <ImageView
+                    android:id="@+id/nav_icon"
+                    android:layout_width="@dimen/_25sdp"
+                    android:layout_height="@dimen/_25sdp"
+                    android:layout_marginEnd="@dimen/app_base_margin_20dp"
+                    android:elevation="10dp"
+                    android:src="@drawable/ic_new_hamm"
+                    app:layout_constraintBottom_toBottomOf="@+id/imageView6"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/imageView6"
+                    app:tint="@color/white" />
+
+
+                <TextView
+                    android:id="@+id/quick_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:elevation="100dp"
+                    android:fontFamily="@font/regular"
+                    android:text="Quick View"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_11sdp"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/up_btn" />
+
+                <ImageView
+                    android:id="@+id/up_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:src="@drawable/ic_swipe_down"
+                    android:visibility="gone"
+                    app:layout_constraintHorizontal_bias="0.501"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/imageView7"
+                    tools:layout_editor_absoluteY="412dp" />
+
+                <ImageView
+                    android:id="@+id/imageView7"
+                    android:layout_width="match_parent"
+                    android:layout_height="499dp"
+                    android:src="@drawable/ic_home_swipe"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <!--                <com.airbnb.lottie.LottieAnimationView-->
+                <!--                    android:layout_width="match_parent"-->
+                <!--                    android:layout_height="wrap_content"-->
+                <!--                    app:layout_constraintBottom_toTopOf="@+id/quick_view"-->
+                <!--                    app:layout_constraintTop_toBottomOf="@+id/view"-->
+                <!--                    app:lottie_autoPlay="true"-->
+                <!--                    app:lottie_loop="true"-->
+                <!--                    app:lottie_rawRes="@raw/lottie" />-->
+
+
+
+
+                <TextView
+                    android:id="@+id/user_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/extrabold"
+                    android:text="Salaam Billy,"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_20sdp"
+                    app:layout_constraintStart_toStartOf="@+id/imageView6"
+                    app:layout_constraintTop_toBottomOf="@+id/imageView6" />
+
+                <ImageView
+                                    android:id="@+id/clickImage"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:paddingHorizontal="20dp"
+                                    android:visibility="visible"
+                                    android:translationY="-10dp"
+                                    android:src="@drawable/ic_groc"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toBottomOf="@+id/user_name" />
+<!--                <include-->
+<!--                    android:id="@+id/clickImage"-->
+<!--                    layout="@layout/layout_scan_groceries_card"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginTop="10dp"-->
+<!--                    android:layout_marginStart="20dp"-->
+<!--                    android:layout_marginEnd="20dp"-->
+<!--                    app:layout_constraintEnd_toEndOf="parent"-->
+<!--                    app:layout_constraintStart_toStartOf="parent"-->
+<!--                    app:layout_constraintTop_toBottomOf="@id/user_name" />-->
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <View
+                android:id="@+id/vieww"
+                android:layout_width="wrap_content"
+                android:layout_height="1dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/header"
+                android:translationY="-90dp"/>
+
+
+
+            <LinearLayout
+                android:id="@+id/tvNearByy"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:translationY="-70dp"
+                android:orientation="vertical"
+                android:paddingHorizontal="@dimen/_15sdp"
+                android:visibility="visible"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/vieww">
+
+                <!-- Header row: small label + green "Search More" pill (collapsed search) -->
+                <LinearLayout
+                    android:id="@+id/headerRow"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/bold"
+                        android:letterSpacing="0.04"
+                        android:text="DISCOVER FOOD NEAR YOU"
+                        android:textColor="@color/black"
+                        android:textSize="11sp"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:id="@+id/searchMoreBtn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bg_search_more_pill"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingHorizontal="@dimen/_8sdp"
+                        android:paddingVertical="@dimen/_4sdp">
+
+
+                        <ImageView
+                            android:layout_width="@dimen/_11sdp"
+                            android:layout_height="@dimen/_11sdp"
+                            android:layout_marginStart="@dimen/_5sdp"
+                            android:layout_marginEnd="4dp"
+                            android:contentDescription="search by venue name"
+                            android:src="@drawable/ic_search_grey"
+                            app:tint="@color/loginCancel_green" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/regular"
+                            android:text="Search More"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="13sp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- Big title -->
+                <TextView
+                    android:id="@+id/tvFindHalal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/bold"
+                    android:text="Find Halal Restaurants"
+                    android:textColor="@color/black"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+
+                <!-- Expanded full-width search bar (hidden until "Search More" tapped) -->
+                <LinearLayout
+                    android:id="@+id/searchBarRow"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <EditText
+                        android:id="@+id/searchVenue"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/_30sdp"
+                        android:layout_weight="1"
+                        android:background="@drawable/btn_bg_round"
+                        android:backgroundTint="@color/gray"
+                        android:drawableLeft="@drawable/ic_baseline_search_24"
+                        android:drawablePadding="10dp"
+                        android:hint="search by venue name"
+                        android:imeOptions="actionSearch"
+                        android:minHeight="35dp"
+                        android:padding="@dimen/_5sdp"
+                        android:singleLine="true"
+                        android:textSize="12sp" />
+
+                    <ImageView
+                        android:id="@+id/crossBtn"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:padding="@dimen/_5sdp"
+                        android:src="@drawable/ic_closee"
+                        android:visibility="gone" />
+                </LinearLayout>
+
+                <!-- Preserved (hidden) controls still referenced from HomeFragment -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:id="@+id/ivList"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/selected_option"
+                        android:padding="@dimen/_5sdp"
+                        android:src="@drawable/list"
+                        android:visibility="gone" />
+
+                    <ImageView
+                        android:id="@+id/ivMap"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/_5sdp"
+                        android:src="@drawable/ic_room_black_24dp"
+                        android:visibility="gone" />
+
+                    <ImageView
+                        android:id="@+id/lt1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="39dp"
+                        android:padding="@dimen/_7sdp"
+                        android:src="@drawable/filtersa"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/tvSatellite"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/regular"
+                        android:singleLine="true"
+                        android:text="Terrain View"
+                        android:textColor="@color/navigationBarColor"
+                        android:textSize="@dimen/text_11pt"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/tvStreetView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/regular"
+                        android:singleLine="true"
+                        android:text="Street View"
+                        android:textColor="@color/navigationBarColor"
+                        android:textSize="@dimen/text_11pt"
+                        android:visibility="gone" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_nearby"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_below="@+id/tvNearByy"
+                android:divider="@android:color/white"
+                android:fadingEdge="none"
+                android:translationY="-60dp"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvNearByy"
+                tools:listitem="@layout/nearby_row" />
+
+
+
+            <!--            -->
+            <!--            <androidx.recyclerview.widget.RecyclerView-->
+            <!--                android:layout_width="match_parent"-->
+            <!--                android:layout_height="@dimen/_600sdp"-->
+            <!--             android:visibility="gone"-->
+            <!--                -->
+            <!--                app:layout_constraintBottom_toBottomOf="parent"-->
+            <!--                app:layout_constraintLeft_toLeftOf="parent"-->
+            <!--                android:id="@+id/rv_aa"/>-->
+
+            <LinearLayout
+                android:id="@+id/linear_nearBy"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/header">
+
+                <RelativeLayout
+
+                    android:id="@+id/rell"
+                    android:layout_width="match_parent"
+
+                    android:layout_height="0dp"
+
+
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    tools:ignore="Suspicious0dp">
+
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_7sdp"
+                        android:layout_marginTop="@dimen/pd_below_button"
+                        android:fontFamily="@font/bold"
+                        android:paddingVertical="@dimen/_5sdp"
+                        android:text="Nearby Venues"
+                        android:textColor="@color/common_google_signin_btn_text_dark_focused"
+                        android:textSize="@dimen/text_9pt"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/no_record_found"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:fontFamily="@font/bold"
+                        android:paddingVertical="@dimen/_5sdp"
+                        android:text="No Record Found"
+                        android:textColor="@color/d_grey"
+                        android:textSize="@dimen/text_9pt"
+                        android:visibility="gone" />
+
+
+
+                </RelativeLayout>
+            </LinearLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <!--        <LinearLayout-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="match_parent"-->
+        <!--            android:background="@color/white"-->
+        <!--            android:visibility="gone"-->
+
+        <!--          >-->
+        <!--            <FrameLayout-->
+        <!--                android:id="@+id/fragment_container"-->
+        <!--                android:layout_width="match_parent"-->
+        <!--                android:layout_height="match_parent" />-->
+
+        <!--        </LinearLayout>-->
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/nvView"
+        android:layout_width="320dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="end"
+        android:background="@color/white">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <include layout="@layout/navigation_header_listview" />
+
+            <ListView
+                android:id="@+id/nav_listview"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:choiceMode="singleChoice"
+                android:divider="@android:color/white"
+                android:scrollbars="none" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="16dp"
+                android:gravity="start"
+                android:text=" 🇦🇺 Made in Australia "
+                android:textColor="@color/black"
+                android:fontFamily="@font/med"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+    </com.google.android.material.navigation.NavigationView>
+</androidx.drawerlayout.widget.DrawerLayout>

@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+<RelativeLayout
+     android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/white"
+    android:layout_marginLeft="@dimen/_8sdp"
+    android:layout_marginTop="@dimen/_10sdp"
+    android:layout_marginRight="@dimen/_8sdp">
+
+   <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvReviews"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:nestedScrollingEnabled="false"
+            android:cacheColorHint="@color/white"
+            android:dividerHeight="@dimen/app_base_margin_5dp"
+            android:fadingEdge="none"
+            android:scrollbars="none"
+            />
+
+   <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvGoogleReviews"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:nestedScrollingEnabled="false"
+       android:layout_marginTop="@dimen/_2sdp"
+       android:layout_below="@+id/rvReviews"
+            android:cacheColorHint="@color/white"
+            android:dividerHeight="@dimen/app_base_margin_5dp"
+            android:fadingEdge="none"
+            android:scrollbars="none"
+            />
+
+
+    <RelativeLayout
+        android:id="@+id/review_part1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:paddingTop="@dimen/app_base_margin_10dp"
+        android:layout_below="@+id/rvGoogleReviews"
+        android:paddingBottom="@dimen/app_base_margin_8dp"
+        android:paddingLeft="@dimen/_15sdp"
+        android:paddingRight="@dimen/_15sdp"
+        >
+
+        <TextView
+            android:id="@+id/tv_review_rate"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/ratingbar_maxHeight"
+            android:text="0.0"
+            android:fontFamily="@font/bold"
+            android:textSize="@dimen/text_11pt"
+            android:textColor="@color/navigationBarColor"
+             android:layout_alignParentLeft="true"
+            android:layout_marginRight="@dimen/_10sdp"
+            android:gravity="center_vertical"
+            />
+
+        <RatingBar
+            android:id="@+id/review_user_ratingbar"
+            style="@style/CustomRatingBarGold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:isIndicator="true"
+            android:numStars="5"
+            android:stepSize="0.5"
+            android:visibility="visible"
+            android:layout_toRightOf="@id/tv_review_rate"
+
+            />
+
+
+        <TextView
+            android:id="@+id/tv_review_tag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Reviews"
+            android:fontFamily="@font/regular"
+            android:textSize="@dimen/text_9pt"
+            android:textColor="@color/edittext_line_color"
+             android:layout_alignParentRight="true"
+            android:layout_alignTop="@id/tv_review_rate"
+            android:layout_alignBottom="@id/tv_review_rate"
+            android:gravity="center"
+            />
+
+        <TextView
+            android:id="@+id/tv_review_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="[0]"
+            android:fontFamily="@font/regular"
+            android:textSize="@dimen/text_9pt"
+            android:textColor="@color/edittext_line_color"
+             android:layout_toLeftOf="@id/tv_review_tag"
+            android:layout_marginLeft="@dimen/_5sdp"
+            android:layout_marginRight="@dimen/_5sdp"
+            android:layout_alignTop="@id/tv_review_rate"
+            android:layout_alignBottom="@id/tv_review_rate"
+            android:gravity="center"
+            />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/iv_details_addReviewButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:background="@drawable/btn_bg_round"
+        android:backgroundTint="@color/colorPrimary"
+        android:paddingVertical="@dimen/_10sdp"
+         android:layout_below="@id/review_part1"
+        android:layout_marginLeft="@dimen/_5sdp"
+        android:layout_marginRight="@dimen/_5sdp"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add Review"
+             android:fontFamily="@font/bold"
+            android:textSize="@dimen/text_8pt"
+
+            android:textColor="@color/white"
+             android:layout_centerInParent="true"
+            />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_readAllReview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/iv_details_addReviewButton"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="@dimen/app_base_margin_5dp"
+
+        android:layout_marginRight="@dimen/_5sdp"
+        android:layout_marginBottom="@dimen/app_base_margin_8dp"
+        android:fontFamily="@font/regular"
+        android:gravity="right"
+        android:text="Read All Reviews >"
+        android:textColor="@color/navigationBarColor"
+        android:textSize="@dimen/text_8pt" />
+<!--
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:id="@+id/adViewSection"
+        android:layout_below="@+id/tv_readAllReview"
+        android:layout_marginTop="@dimen/_15sdp">
+        <View
+            android:id="@+id/viewthree"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/details_bg_color" />
+
+        <com.google.android.gms.ads.AdView
+            xmlns:ads="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/adView"
+            android:layout_width="wrap_content"
+            android:layout_below="@id/viewthree"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="@dimen/_18sdp"
+            android:layout_centerHorizontal="true"
+            ads:adSize="BANNER"
+            ads:adUnitId="ca-app-pub-3940256099942544/6300978111">
+        </com.google.android.gms.ads.AdView>
+        <View
+            android:id="@+id/viewFour"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/adView"
+            android:layout_marginBottom="@dimen/_5sdp"
+            android:background="@color/details_bg_color" />
+    </RelativeLayout>-->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:visibility="gone"
+        android:layout_below="@+id/tv_readAllReview"
+        android:id="@+id/adViewSection"
+        android:layout_alignParentBottom="true">
+
+
+
+
+        <View
+            android:id="@+id/viewthree"
+            android:layout_width="match_parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_height="1dp"
+            android:background="@color/details_bg_color" />
+
+
+
+        <com.google.android.gms.ads.AdView
+            android:id="@+id/ad_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="@dimen/_5sdp"
+            android:layout_marginBottom="0dp"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/viewthree"
+            app:layout_constraintBottom_toTopOf="@+id/viewFour"
+            android:layout_marginStart="8dp"
+            ads:adSize="BANNER"
+            ads:adUnitId="@string/adsunitid"
+            ads:layout_constraintBottom_toBottomOf="parent"
+            ads:layout_constraintEnd_toEndOf="parent"
+            ads:layout_constraintStart_toStartOf="parent" />
+
+
+        <TextView
+            android:id="@+id/tvMsg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_centerInParent="true"
+            android:ellipsize="end"
+            app:layout_constraintBottom_toTopOf="@+id/viewFour"
+            android:maxLines="2"
+            app:layout_constraintTop_toBottomOf="@+id/viewthree"
+            android:text=""
+            android:layout_marginVertical="@dimen/_18sdp"
+            android:textColor="@color/navigationBarColor"
+            android:gravity="center"
+            android:textSize="@dimen/text_9pt"  />
+        <View
+            android:id="@+id/viewFour"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/adView"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="@dimen/_1sdp"
+            android:background="@color/details_bg_color" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+</RelativeLayout>
+
+</androidx.core.widget.NestedScrollView>
