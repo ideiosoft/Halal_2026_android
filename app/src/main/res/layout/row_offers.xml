@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/app_base_margin_5dp"
+    android:orientation="vertical"
+    android:weightSum="1">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".6"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_offer_heading"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:fontFamily="@font/bold"
+                android:maxLines="1"
+
+                android:text=" "
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/text_11pt" />
+
+            <TextView
+                android:id="@+id/tv_offer_desc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+
+                android:ellipsize="end"
+
+                android:fontFamily="@font/bold"
+                android:text="Offer Desc"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/text_8pt" />
+
+            <TextView
+                android:id="@+id/tvMinSpend"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/regular"
+                android:text="Minimum spend"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/text_8pt" />
+
+            <TextView
+                android:id="@+id/tvValidity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:ellipsize="end"
+                android:fontFamily="@font/regular"
+                android:text="Valid Till"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/text_8pt" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight=".4"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tvRedeem"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
+                android:paddingVertical="@dimen/_6sdp"
+                android:paddingHorizontal="@dimen/_17sdp"
+                android:background="@drawable/redeem_bg"
+                android:fontFamily="@font/med"
+                android:gravity="center"
+                android:text="Redeem"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_9pt" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/view_line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:background="@color/details_bg_color"
+        android:paddingLeft="@dimen/_4sdp"
+        android:paddingRight="@dimen/_4sdp" />
+</LinearLayout>

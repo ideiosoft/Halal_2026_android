@@ -1,0 +1,572 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:id="@+id/rlViewPager"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+
+                android:id="@+id/ivRestaurant"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/details_viewpager_height"
+                android:scaleType="centerCrop" />
+
+            <ImageView
+                android:id="@+id/ivBack"
+                android:layout_width="35dp"
+                android:padding="@dimen/_5sdp"
+                android:layout_height="35dp"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:adjustViewBounds="true"
+                android:background="@drawable/wightbg"
+                android:scaleType="centerCrop"
+                android:src="@drawable/back_green" />
+           <!-- <com.jude.rollviewpager.RollPagerView
+                android:id="@+id/viewPager"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/details_viewpager_height"
+                android:scrollIndicators="none"
+                android:visibility="gone"
+                app:rollviewpager_play_delay="3000"
+                tools:targetApi="m" />-->
+
+            <ImageView
+                android:id="@+id/iv_slide_arrow_left"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/app_base_margin_10dp"
+                android:layout_marginLeft="@dimen/app_base_margin_10dp"
+                android:src="@drawable/image_back_arrow"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/iv_slide_arrow_right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="@dimen/app_base_margin_10dp"
+                android:layout_marginRight="@dimen/app_base_margin_10dp"
+                android:src="@drawable/image_next_arrow"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/ivTopBanner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter"
+                android:padding="@dimen/_10sdp"
+                android:visibility="gone"
+                android:src="@drawable/list_placeholder" />
+
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tvRestaurantName"
+            android:layout_marginTop="@dimen/pd_below_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/rlViewPager"
+            android:text="Restaurant Name"
+            android:textColor="@color/common_google_signin_btn_text_dark_focused"
+            android:fontFamily="@font/bold"
+            android:textSize="@dimen/text_11pt" />
+
+
+        <RatingBar
+            android:id="@+id/ratingbar_details"
+            style="@style/CustomRatingBarGold"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/ratingbar_maxHeight"
+            android:layout_below="@+id/tvRestaurantName"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/pd_below_button"
+            android:isIndicator="true"
+            android:numStars="5"
+            android:stepSize="0.5"
+            android:visibility="gone" />
+
+
+        <ImageView
+            android:id="@+id/iv_divider1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ratingbar_details"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/app_base_margin_5dp"
+            android:src="@drawable/line" />
+
+        <RelativeLayout
+            android:id="@+id/rl_details_time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/iv_divider1"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/app_base_margin_5dp"
+            android:layout_marginBottom="@dimen/app_base_margin_5dp"
+            android:gravity="center_horizontal">
+
+            <TextView
+                android:id="@+id/tv_nowOpen"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Now Open "
+                android:fontFamily="@font/regular"
+                android:textSize="@dimen/text_11pt"
+                android:textColor="@color/loginCancel_green"
+                />
+
+            <TextView
+                android:id="@+id/tv_restaurant_openTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/tv_nowOpen"
+                android:fontFamily="@font/regular"
+                android:text="- 6PM to 11PM"
+                android:textColor="@color/common_google_signin_btn_text_dark_focused"
+                android:textSize="@dimen/text_11pt"
+                android:visibility="visible" />
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/iv_divider2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rl_details_time"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/line" />
+
+        <RelativeLayout
+            android:id="@+id/rl_details_delivery"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rl_details_time"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/app_base_margin_5dp"
+             android:gravity="center_horizontal">
+
+            <TextView
+                android:id="@+id/tv_deliveryAvailable"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Delivery Available"
+                android:layout_marginRight="@dimen/_5sdp"
+                android:textColor="@color/common_google_signin_btn_text_dark_focused"
+                android:fontFamily="@font/regular"
+                android:textSize="@dimen/text_11pt" />
+
+            <ImageView
+                android:id="@+id/iv_deliveryIcon"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/app_base_margin_8dp"
+                android:layout_marginLeft="@dimen/app_base_margin_8dp"
+                android:layout_toEndOf="@+id/tv_deliveryAvailable"
+                android:layout_toRightOf="@+id/tv_deliveryAvailable"
+                android:src="@drawable/ic_takeaway" />
+        </RelativeLayout>
+
+
+        <ImageView
+            android:id="@+id/iv_call_details"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rl_details_delivery"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/app_base_margin_5dp"
+            android:layout_marginBottom="@dimen/app_base_margin_10dp"
+            android:visibility="gone" />
+
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:weightSum="5"
+            android:paddingHorizontal="@dimen/_10sdp"
+            android:layout_below="@+id/tv_order_now"
+             android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:id="@+id/clDirection"
+                android:layout_weight="1"
+                android:visibility="gone"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:id="@+id/ivDirection"
+                    android:src="@drawable/send_new"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    android:layout_marginHorizontal="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginVertical="@dimen/_10sdp"
+                    android:padding="@dimen/_12sdp"
+                    android:background="@drawable/icons_background"
+                    android:layout_height="50dp">
+                </ImageView>
+
+                <TextView
+                    android:id="@+id/tvDirection"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:text="Get Direction"
+                    android:singleLine="true"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                     app:layout_constraintTop_toBottomOf="@+id/ivCall"
+                    android:textColor="@color/common_google_signin_btn_text_dark_focused"
+                    android:fontFamily="@font/regular"
+                    android:textSize="@dimen/text_6pt" />
+
+            </LinearLayout>
+
+            <LinearLayout
+
+                android:layout_width="0dp"
+                android:id="@+id/clCall"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:id="@+id/ivCall"
+                    android:src="@drawable/ic_call"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    android:layout_marginHorizontal="@dimen/_10sdp"
+                    android:layout_marginVertical="@dimen/_10sdp"
+                    android:padding="@dimen/_12sdp"
+                    android:background="@drawable/icons_background"
+                    android:layout_height="50dp">
+                </ImageView>
+
+                <TextView
+                    android:id="@+id/tvCall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Call"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                     app:layout_constraintTop_toBottomOf="@+id/ivCall"
+                    android:textColor="@color/common_google_signin_btn_text_dark_focused"
+                    android:fontFamily="@font/regular"
+                    android:textSize="@dimen/text_6pt" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:id="@+id/clReview"
+                android:orientation="vertical"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:id="@+id/ivReview"
+                    android:src="@drawable/ic_add"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    android:layout_marginHorizontal="@dimen/_10sdp"
+                    android:layout_marginVertical="@dimen/_10sdp"
+                    android:padding="@dimen/_12sdp"
+                    android:background="@drawable/icons_background"
+                    android:layout_height="50dp">
+
+                </ImageView>
+
+
+                <TextView
+                    android:id="@+id/tvReview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Review"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                     app:layout_constraintTop_toBottomOf="@+id/ivReview"
+                    android:textColor="@color/common_google_signin_btn_text_dark_focused"
+                    android:fontFamily="@font/regular"
+                    android:textSize="@dimen/text_6pt" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:id="@+id/clWeb"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:layout_weight="1"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:src="@drawable/ic_link"
+                    android:id="@+id/ivLink"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    android:layout_marginHorizontal="@dimen/_10sdp"
+                    android:layout_marginVertical="@dimen/_10sdp"
+                    android:padding="@dimen/_12sdp"
+                    android:background="@drawable/icons_background"
+                    android:layout_height="50dp">
+
+                </ImageView>
+
+
+
+                <TextView
+                    android:id="@+id/tvLink"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Website"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                     app:layout_constraintTop_toBottomOf="@+id/ivLink"
+                    android:textColor="@color/common_google_signin_btn_text_dark_focused"
+                    android:fontFamily="@font/regular"
+                    android:textSize="@dimen/text_6pt" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:id="@+id/clFav"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:src="@drawable/ic_like_d"
+                    android:id="@+id/ivLike"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    android:layout_marginHorizontal="@dimen/_10sdp"
+                    android:layout_marginVertical="@dimen/_10sdp"
+                    android:padding="@dimen/_12sdp"
+                    android:background="@drawable/icons_background"
+                    android:layout_height="50dp">
+
+                </ImageView>
+
+
+
+                <TextView
+                    android:id="@+id/tvLike"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Favourite"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                     app:layout_constraintTop_toBottomOf="@+id/ivLike"
+                    android:textColor="@color/common_google_signin_btn_text_dark_focused"
+                    android:fontFamily="@font/regular"
+                    android:textSize="@dimen/text_6pt" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+android:orientation="vertical"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:id="@+id/clShare"
+                android:layout_weight="1"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:src="@drawable/ic_share"
+                    android:id="@id/ivShare"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    android:layout_marginHorizontal="@dimen/_10sdp"
+                    android:layout_marginVertical="@dimen/_10sdp"
+                    android:padding="@dimen/_12sdp"
+                    android:background="@drawable/icons_background"
+                    android:layout_height="50dp">
+
+                </ImageView>
+
+                <TextView
+                    android:id="@+id/tvShare"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Share"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                     app:layout_constraintTop_toBottomOf="@+id/ivShare"
+                    android:textColor="@color/common_google_signin_btn_text_dark_focused"
+                    android:fontFamily="@font/regular"
+                    android:textSize="@dimen/text_6pt" />
+            </LinearLayout>
+
+
+
+
+        </LinearLayout>
+
+        <androidx.cardview.widget.CardView
+            app:cardCornerRadius="25dp"
+            android:id="@+id/ordernow_"
+            android:visibility="gone"
+            app:cardBackgroundColor="@color/black"
+            android:layout_marginTop="@dimen/app_base_margin_10dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            android:layout_gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <LinearLayout
+
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+
+
+                android:orientation="horizontal">
+
+
+                <ImageView
+                    android:layout_gravity="center"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/bag_shop" />
+
+
+                <TextView
+                    android:id="@+id/tv_order_now"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/rl_details_delivery"
+                    android:gravity="center"
+                    android:padding="@dimen/_10sdp"
+                    android:fontFamily="@font/regular"
+                    android:textSize="@dimen/text_11pt"
+                    android:text="Order Now"
+                    android:textColor="@color/white"
+                    />
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+             android:layout_below="@+id/separator_1"
+            android:id="@+id/adViewSection"
+            android:layout_alignParentBottom="true">
+
+
+
+
+            <View
+                android:id="@+id/viewadsone"
+                android:layout_width="match_parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_height="1dp"
+                android:background="@color/details_bg_color" />
+
+
+            <com.google.android.gms.ads.AdView
+                android:id="@+id/ad_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                 android:layout_marginBottom="0dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginTop="@dimen/_10sdp"
+                 app:layout_constraintTop_toBottomOf="@+id/viewadsone"
+                app:layout_constraintBottom_toTopOf="@+id/viewadstwo"
+                android:layout_marginStart="8dp"
+                ads:adSize="BANNER"
+                ads:adUnitId="@string/adsunitid"
+                ads:layout_constraintBottom_toBottomOf="parent"
+                ads:layout_constraintEnd_toEndOf="parent"
+                ads:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:id="@+id/tvMsgg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                android:layout_centerInParent="true"
+                android:ellipsize="end"
+                android:visibility="visible"
+                app:layout_constraintBottom_toTopOf="@+id/viewadstwo"
+                android:maxLines="2"
+                app:layout_constraintTop_toBottomOf="@+id/viewadsone"
+                android:text=""
+                android:layout_marginVertical="@dimen/_18sdp"
+                android:textColor="@color/navigationBarColor"
+                android:gravity="center"
+                android:textSize="@dimen/text_9pt" />
+            <View
+                android:id="@+id/viewadstwo"
+                android:layout_width="match_parent"
+                android:visibility="gone"
+                android:layout_height="1dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginBottom="@dimen/_1sdp"
+                android:background="@color/details_bg_color" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </LinearLayout>
+
+</RelativeLayout>

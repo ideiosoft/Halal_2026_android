@@ -1,0 +1,379 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    android:paddingLeft="@dimen/app_base_margin_5dp"
+    android:paddingTop="@dimen/_10sdp"
+
+    android:paddingRight="@dimen/app_base_margin_5dp"
+   >
+
+    <LinearLayout
+        android:id="@+id/ll_parent"
+        android:layout_width="match_parent"
+        android:weightSum="10"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+       >
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="6"
+            android:paddingLeft="@dimen/app_base_margin_5dp">
+
+            <TextView
+                android:id="@+id/tv_cuisine_tag"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="CUISINES"
+                android:fontFamily="@font/regular"
+                android:textSize="@dimen/text_9pt"
+                android:textColor="@color/beforeLogin_text_color" />
+
+            <TextView
+                android:id="@+id/tv_cuisine_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_cuisine_tag"
+                android:fontFamily="@font/regular"
+                android:text="Italian"
+                android:textColor="@color/navigationBarColor"
+                android:textSize="@dimen/text_11pt" />
+
+            <TextView
+                android:id="@+id/tv_establishment_tag"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_cuisine_type"
+                android:fontFamily="@font/regular"
+                android:textSize="@dimen/text_9pt"
+                android:layout_marginTop="@dimen/pd_below_button"
+                android:text="ESTABLISHMENT TYPE"
+                android:textColor="@color/beforeLogin_text_color"/>
+
+            <TextView
+                android:id="@+id/tv_establishment_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_establishment_tag"
+                android:text="Casual Dining"
+                android:fontFamily="@font/regular"
+                android:textSize="@dimen/text_11pt"
+                android:textColor="@color/navigationBarColor"/>
+
+            <TextView
+                android:id="@+id/tv_avgCost_tag"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_establishment_type"
+                android:layout_marginTop="@dimen/pd_below_button"
+                android:text="AVERAGE COST PER MEAL"
+                android:fontFamily="@font/regular"
+                android:textSize="@dimen/text_9pt"
+                android:textColor="@color/beforeLogin_text_color"/>
+
+            <TextView
+                android:id="@+id/tv_avgCost_type"
+                android:layout_width="wrap_content"
+                android:fontFamily="@font/regular"
+                android:textSize="@dimen/text_11pt"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_avgCost_tag"
+                android:text="$20 - $30 Mains"
+                android:textColor="@color/navigationBarColor"/>
+            <TextView
+                android:id="@+id/tvPaymentOption"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_avgCost_type"
+                android:layout_marginTop="@dimen/pd_below_button"
+                android:text="PAYMENT OPTIONS"
+                android:fontFamily="@font/regular"
+                android:textSize="@dimen/text_9pt"
+                android:textColor="@color/beforeLogin_text_color"/>
+            <TextView
+                android:id="@+id/tv_cashCardAccepted_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/regular"
+                android:textSize="@dimen/text_11pt"
+                android:layout_below="@+id/tvPaymentOption"
+
+                android:text="@string/cash_amp_cards"
+                android:textColor="@color/navigationBarColor" />
+
+            <TextView
+                android:id="@+id/tv_website"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:layout_below="@+id/tv_cashCardAccepted_type"
+                android:layout_marginTop="@dimen/app_base_margin_5dp"
+                android:drawableRight="@drawable/website"
+                android:drawablePadding="@dimen/app_base_margin_5dp"
+                android:gravity="center_vertical"
+                android:fontFamily="@font/regular"
+                android:textSize="@dimen/text_9pt"
+                android:text="WEBSITE"
+                android:textColor="@color/navigationBarColor"
+                />
+
+        </RelativeLayout>
+
+        <!--<RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="4">-->
+
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="4"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_moreInfo"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:text="MORE INFO"
+                android:fontFamily="@font/regular"
+                android:textSize="@dimen/text_9pt"
+                android:textColor="@color/beforeLogin_text_color" />
+
+            <TextView
+                android:id="@+id/tv_halal_rate"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_below="@+id/tv_moreInfo"
+                android:layout_weight="1.5"
+                android:drawablePadding="@dimen/app_base_margin_5dp"
+                android:gravity="center_vertical"
+                android:fontFamily="@font/regular"
+                android:textSize="@dimen/text_11pt"
+                android:text=""
+                android:textColor="@color/loginCancel_green" />
+
+            <TextView
+                android:id="@+id/tv_moreInfo_option1"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_below="@+id/tv_halal_rate"
+                android:layout_weight="1"
+                android:text=""
+                android:gravity="top|center_horizontal"
+                android:layout_gravity="top"
+                android:fontFamily="@font/regular"
+                android:textSize="@dimen/text_11pt"
+                android:textColor="@color/navigationBarColor"
+                android:visibility="visible" />
+
+            <TextView
+                android:id="@+id/tv_moreInfo_option2"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_below="@+id/tv_moreInfo_option1"
+                android:layout_marginTop="@dimen/login_cancel_margin"
+                android:layout_weight="1"
+                android:text=""
+                android:fontFamily="@font/regular"
+                android:textSize="@dimen/text_11pt"
+                android:textColor="@color/navigationBarColor"
+                android:visibility="visible" />
+
+            <TextView
+                android:id="@+id/tv_moreInfo_option3"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_below="@+id/tv_moreInfo_option2"
+                android:layout_marginTop="@dimen/login_cancel_margin"
+                android:layout_weight="1.2"
+                android:text=""
+                android:fontFamily="@font/regular"
+                android:textSize="@dimen/text_11pt"
+                android:textColor="@color/navigationBarColor"
+                android:visibility="visible" />
+
+            <TextView
+                android:id="@+id/tv_moreInfo_option4"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_below="@+id/tv_moreInfo_option3"
+                android:layout_marginTop="@dimen/login_cancel_margin"
+                android:layout_weight="1.2"
+                android:text=""
+                android:fontFamily="@font/regular"
+                android:textSize="@dimen/text_11pt"
+                android:textColor="@color/navigationBarColor"
+                android:visibility="visible" />
+
+            <TextView
+                android:id="@+id/tv_moreInfo_option5"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_below="@+id/tv_moreInfo_option4"
+                android:layout_marginTop="@dimen/login_cancel_margin"
+                android:layout_weight="1.2"
+                android:text=""
+                android:fontFamily="@font/regular"
+                android:textSize="@dimen/text_11pt"
+                android:textColor="@color/navigationBarColor"
+                android:visibility="visible" />
+
+            <TextView
+                android:id="@+id/tv_moreInfo_option6"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_below="@+id/tv_moreInfo_option5"
+                android:layout_marginTop="@dimen/login_cancel_margin"
+                android:layout_weight="1"
+                android:text=""
+                android:fontFamily="@font/regular"
+                android:textSize="@dimen/text_11pt"
+                android:textColor="@color/navigationBarColor"
+                android:visibility="visible" />
+        </LinearLayout>
+
+        <!--</RelativeLayout>-->
+
+    </LinearLayout>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:id="@+id/cmap"
+        android:layout_below="@+id/ll_parent"
+        android:layout_marginBottom="@dimen/_2sdp"
+        app:cardElevation="@dimen/_2sdp"
+        android:layout_marginTop="@dimen/_5sdp"
+        app:cardCornerRadius="@dimen/_5sdp"
+        android:layout_marginHorizontal="@dimen/_5sdp"
+        android:layout_height="@dimen/_130sdp">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_below="@+id/ll_parent"
+        android:layout_height="@dimen/_130sdp">
+
+
+        <androidx.cardview.widget.CardView
+android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:id="@+id/cDistance"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="@dimen/_10sdp"
+            android:layout_marginRight="@dimen/_10sdp"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/tvDistance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/regular"
+                 android:gravity="center"
+                android:layout_marginVertical="@dimen/_10sdp"
+                android:layout_marginHorizontal="@dimen/_10sdp"
+                android:textSize="@dimen/text_11pt"
+
+                android:text=""
+                android:textColor="@color/navigationBarColor" />
+
+        </androidx.cardview.widget.CardView>
+
+   <!--     <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:id="@+id/cmap"
+            app:cardCornerRadius="@dimen/_5sdp"
+            android:layout_margin="@dimen/_5sdp"
+            android:layout_height="@dimen/_130sdp">-->
+        <com.google.android.gms.maps.MapView
+            android:id="@+id/map_restaurant"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_130sdp"
+            android:scrollbars="none" />
+      <!--//  </androidx.cardview.widget.CardView>-->
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="bottom"
+            android:visibility="gone"
+            android:layout_gravity="bottom"
+            android:layout_alignBottom="@+id/map_restaurant"
+            android:layout_marginHorizontal="@dimen/_15sdp"
+            android:layout_marginBottom="@dimen/_15sdp"
+            android:background="@drawable/curved_rectangle_border_no_color">
+
+            <View
+                android:id="@+id/view_line"
+                android:layout_width="match_parent"
+                android:layout_height="4dp"
+                android:visibility="gone"
+                android:layout_alignParentTop="true"
+                android:background="@color/loginCancel_green"
+                android:paddingLeft="@dimen/_4sdp"
+                android:paddingRight="@dimen/_4sdp" />
+
+            <RelativeLayout
+                android:id="@+id/navigateAddress"
+                android:layout_width="match_parent"
+                android:visibility="gone"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/_15sdp">
+
+                <ImageView
+                    android:id="@+id/iv_marker"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerInParent="true"
+                    android:layout_marginRight="@dimen/_12sdp"
+                    android:src="@drawable/map_location" />
+
+                <TextView
+                    android:id="@+id/tv_address"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_toRightOf="@id/iv_marker"
+                    android:ellipsize="end"
+                    android:maxLines="2"
+                    android:text="Address"
+                    android:textColor="@color/navigationBarColor"
+                    android:textSize="@dimen/text_11pt" />
+
+                <!--<LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/iv_marker"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_address1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/navigationBarColor"
+                        android:textSize="@dimen/sz_button_text"
+                        android:text="Address "/>
+
+                    <TextView
+                        android:id="@+id/tv_address2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/navigationBarColor"
+                        android:textSize="@dimen/sz_button_text"
+                        android:text="Address "/>
+
+                </LinearLayout>-->
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>

@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    android:paddingTop="@dimen/_10sdp"
+    android:background="@color/white"
+    android:paddingBottom="@dimen/_10sdp"
+    android:paddingHorizontal="@dimen/app_base_margin_5dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/tv_openingHours_tag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Opening Hours"
+        android:fontFamily="@font/regular"
+        android:textSize="@dimen/text_11pt"
+        android:textColor="@color/navigationBarColor"
+        />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/app_base_margin_10dp"
+        android:layout_below="@+id/tv_openingHours_tag"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/myWindowBackground"
+            android:paddingBottom="@dimen/_3sdp"
+            android:paddingTop="@dimen/_3sdp"
+            android:paddingLeft="@dimen/_3sdp"
+            android:paddingRight="@dimen/_3sdp"
+            >
+
+            <TextView
+                android:id="@+id/tv_mon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Monday"
+                android:fontFamily="@font/regular"
+                android:textSize="@dimen/text_11pt"
+                android:textColor="@color/navigationBarColor" />
+
+            <TextView
+                android:id="@+id/tv_mon_timing"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginLeft="@dimen/app_base_margin_10dp"
+                android:text="6:30AM to 3PM"
+                android:fontFamily="@font/regular"
+                android:textSize="@dimen/text_9pt"
+                android:textColor="@android:color/darker_gray" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/_8sdp"
+            android:paddingTop="@dimen/_8sdp"
+            android:paddingLeft="@dimen/_3sdp"
+            android:paddingRight="@dimen/_3sdp">
+
+            <TextView
+                android:id="@+id/tv_tues"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/regular"
+                android:textSize="@dimen/text_11pt"
+                android:text="Tuesday"
+                android:textColor="@color/navigationBarColor" />
+
+            <TextView
+                android:id="@+id/tv_tues_timing"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/regular"
+                android:textSize="@dimen/text_9pt"
+                android:layout_alignParentRight="true"
+                android:text="6:30AM to 3PM"
+                android:textColor="@android:color/darker_gray" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/_3sdp"
+            android:paddingTop="@dimen/_3sdp"
+            android:paddingLeft="@dimen/_3sdp"
+            android:paddingRight="@dimen/_3sdp"
+            android:background="@color/myWindowBackground">
+
+            <TextView
+                android:id="@+id/tv_wed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Wednesday"
+                android:fontFamily="@font/regular"
+                android:textSize="@dimen/text_11pt"
+                android:textColor="@color/navigationBarColor" />
+
+            <TextView
+                android:id="@+id/tv_wed_timing"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="6:30AM to 3PM"
+                android:fontFamily="@font/regular"
+                android:textSize="@dimen/text_9pt"
+                android:textColor="@android:color/darker_gray"
+                android:layout_alignParentRight="true"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/_8sdp"
+            android:paddingTop="@dimen/_8sdp"
+            android:paddingLeft="@dimen/_3sdp"
+            android:paddingRight="@dimen/_3sdp">
+
+            <TextView
+                android:id="@+id/tv_thurs"
+                android:layout_width="wrap_content"
+                android:fontFamily="@font/regular"
+                android:textSize="@dimen/text_11pt"
+                android:layout_height="wrap_content"
+                android:text="Thursday"
+                android:textColor="@color/navigationBarColor" />
+
+            <TextView
+                android:id="@+id/tv_thur_timing"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/regular"
+                android:textSize="@dimen/text_9pt"
+                android:text="6:30AM to 3PM"
+                android:textColor="@android:color/darker_gray"
+                android:layout_alignParentRight="true"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/myWindowBackground"
+            android:paddingBottom="@dimen/_3sdp"
+            android:paddingTop="@dimen/_3sdp"
+            android:paddingLeft="@dimen/_3sdp"
+            android:paddingRight="@dimen/_3sdp">
+
+            <TextView
+                android:id="@+id/tv_FRI"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/regular"
+                android:textSize="@dimen/text_11pt"
+                android:text="Friday"
+                android:textColor="@color/navigationBarColor" />
+
+            <TextView
+                android:id="@+id/tv_fri_timing"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/regular"
+                android:textSize="@dimen/text_9pt"
+                android:text="6:30AM to 3PM"
+                android:textColor="@android:color/darker_gray"
+                android:layout_alignParentRight="true"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/_8sdp"
+            android:paddingTop="@dimen/_8sdp"
+            android:paddingLeft="@dimen/_3sdp"
+            android:paddingRight="@dimen/_3sdp">
+
+            <TextView
+                android:id="@+id/tv_SAT"
+                android:layout_width="wrap_content"
+                android:fontFamily="@font/regular"
+                android:textSize="@dimen/text_11pt"
+                android:layout_height="wrap_content"
+                android:text="Saturday"
+                android:textColor="@color/navigationBarColor" />
+
+            <TextView
+                android:id="@+id/tv_sat_timing"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="6:30AM to 3PM"
+                android:fontFamily="@font/regular"
+                android:textSize="@dimen/text_9pt"
+                android:textColor="@android:color/darker_gray"
+                android:layout_alignParentRight="true"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/myWindowBackground"
+            android:paddingBottom="@dimen/_3sdp"
+            android:paddingTop="@dimen/_3sdp"
+            android:paddingLeft="@dimen/_3sdp"
+            android:paddingRight="@dimen/_3sdp">
+
+            <TextView
+                android:id="@+id/tv_SUN"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sunday"
+                android:fontFamily="@font/regular"
+                android:textSize="@dimen/text_11pt"
+                android:textColor="@color/navigationBarColor" />
+
+            <TextView
+                android:id="@+id/tv_sun_timing"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="6:30AM to 3PM"
+                android:fontFamily="@font/regular"
+                android:textSize="@dimen/text_9pt"
+                android:textColor="@android:color/darker_gray"
+                android:layout_alignParentRight="true"/>
+
+        </RelativeLayout>
+
+
+<!--
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginTop="@dimen/_15sdp"
+             android:id="@+id/adViewSection"
+            android:layout_alignParentBottom="true">
+
+
+
+
+            <View
+                android:id="@+id/viewthree"
+                android:layout_width="match_parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_height="1dp"
+                android:background="@color/details_bg_color" />
+
+
+
+
+
+            <com.google.android.gms.ads.AdView
+                android:id="@+id/ad_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="@dimen/_5sdp"
+                android:layout_marginBottom="0dp"
+                android:layout_marginEnd="8dp"
+                app:layout_constraintTop_toBottomOf="@+id/viewthree"
+                app:layout_constraintBottom_toTopOf="@+id/viewFour"
+                android:layout_marginStart="8dp"
+                ads:adSize="BANNER"
+                ads:adUnitId="@string/adsunitid"
+                ads:layout_constraintBottom_toBottomOf="parent"
+                ads:layout_constraintEnd_toEndOf="parent"
+                ads:layout_constraintStart_toStartOf="parent" />
+
+
+            <TextView
+                android:id="@+id/tvMsg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                android:layout_centerInParent="true"
+                android:ellipsize="end"
+                app:layout_constraintBottom_toTopOf="@+id/viewFour"
+                android:maxLines="2"
+                app:layout_constraintTop_toBottomOf="@+id/viewthree"
+                android:text=""
+                android:layout_marginVertical="@dimen/_18sdp"
+                android:textColor="@color/navigationBarColor"
+                android:gravity="center"
+                android:textSize="@dimen/text_9pt"  />
+            <View
+                android:id="@+id/viewFour"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/adView"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginBottom="@dimen/_1sdp"
+                android:background="@color/details_bg_color" />
+        </androidx.constraintlayout.widget.ConstraintLayout>-->
+
+    </LinearLayout>
+    </RelativeLayout>
+
+</androidx.core.widget.NestedScrollView>

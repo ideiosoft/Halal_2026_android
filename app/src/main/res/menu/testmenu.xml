@@ -1,0 +1,67 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".MainActivity">
+
+    <!--<item
+        android:id="@+id/action_search"
+        android:icon="@drawable/slider_navigation"
+        android:orderInCategory="100"
+        android:title="@string/action_search"
+        app:showAsAction="ifRoom" >
+
+    &lt;!&ndash;<item&ndash;&gt;
+        &lt;!&ndash;android:id="@+id/a_More"&ndash;&gt;
+        &lt;!&ndash;android:icon="@drawable/menu_iconn"&ndash;&gt;
+        &lt;!&ndash;android:showAsAction="always"&ndash;&gt;
+        &lt;!&ndash;android:title="More">&ndash;&gt;
+        <menu>-->
+
+            <!-- Refresh -->
+            <item
+                android:id="@+id/idloc_update"
+                android:icon="@drawable/updateloc"
+                app:showAsAction="never"
+                android:title="@string/loc_update" />
+
+
+            <item
+                android:id="@+id/idshow_me"
+                android:icon="@drawable/myposition"
+                app:showAsAction="never"
+                android:title="@string/show_me" />
+
+
+            <!-- Help -->
+            <item
+                android:id="@+id/idfind_us"
+                android:icon="@drawable/findus"
+                app:showAsAction="never"
+                android:title="@string/find_us" />
+            <!-- Help -->
+
+            <!-- Help -->
+
+
+            <!-- Check updates -->
+            <item
+                android:id="@+id/idabout_us"
+                android:icon="@drawable/aboutus"
+                app:showAsAction="never"
+                android:title="@string/about_us" />
+
+            <item
+                android:id="@+id/id_logout"
+                android:icon="@drawable/aboutus"
+                app:showAsAction="never"
+                android:title="@string/logout" />
+            <!--<item-->
+                <!--android:id="@+id/menu_item_share"-->
+                <!--android:actionProviderClass="android.widget.ShareActionProvider"-->
+                <!--android:icon="@drawable/shareit"-->
+                <!--app:showAsAction="ifRoom"-->
+                <!--android:title="Share" />-->
+        <!--</menu>-->
+    <!--</item>-->
+</menu>
+

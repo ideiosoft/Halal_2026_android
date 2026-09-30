@@ -1,0 +1,25 @@
+{
+  "permissions": {
+    "allow": [
+      "Read(//Users/ideiosoft/Downloads/**)",
+      "Read(//Users/ideiosoft/Desktop/**)",
+      "Bash(sh gradlew :app:compileDebugKotlin)",
+      "Bash(sh gradlew :app:compileDebugKotlin :app:compileDebugJavaWithJavac)",
+      "Bash(./gradlew :app:compileDebugKotlin -q)",
+      "Bash(sh gradlew :app:assembleDebug -q)",
+      "Bash(echo \"BUILD EXIT: $?\")",
+      "Bash(sh gradlew :app:assembleDebug -q --rerun-tasks)",
+      "Bash(sh gradlew clean -q)",
+      "Bash(cat plan_card_unselected.xml)",
+      "Bash(cat plan_card_premium_bg.xml)",
+      "Bash(./gradlew :app:bundleRelease --no-daemon)",
+      "Bash(java -version)",
+      "Bash(./gradlew bundleRelease --no-daemon)",
+      "Bash(xxd -p -r)",
+      "Bash(./gradlew bundleRelease)",
+      "Bash(./gradlew :app:compileReleaseKotlin)",
+      "Bash(./gradlew clean *)",
+      "Bash(./gradlew :app:bundleRelease)"
+    ]
+  }
+}

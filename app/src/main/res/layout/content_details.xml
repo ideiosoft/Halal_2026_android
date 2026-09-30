@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rl_details_layout"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/rl_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@color/white"
+        android:minHeight="52dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginStart="55dp"
+            android:layout_marginEnd="55dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/regular"
+                android:singleLine="true"
+                android:text="@string/app_name"
+                android:textAllCaps="true"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_9pt" />
+
+            <TextView
+                android:id="@+id/tvSubTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/regular"
+                android:singleLine="true"
+                android:text="@string/app_name"
+                android:textAllCaps="true"
+                android:textColor="#bababa"
+                android:textSize="16sp"
+                android:visibility="gone" />
+        </LinearLayout>
+
+
+
+        <ImageView
+            android:id="@+id/ivShare"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/_5sdp"
+            android:layout_marginRight="@dimen/_5sdp"
+            android:adjustViewBounds="true"
+            android:scaleType="fitCenter"
+            android:src="@drawable/share" />
+
+    </RelativeLayout>
+
+    <include
+        android:id="@+id/toolbar_details"
+        layout="@layout/toolbar_details"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_above="@+id/adView"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@+id/rl_toolbar"
+        android:id="@+id/nested"
+        android:layout_below="@+id/rl_toolbar"
+        app:layout_constraintBottom_toTopOf="@+id/viewthree"
+        android:background="@color/white"
+        android:scrollbars="none">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <include
+                android:id="@+id/details_part1"
+                layout="@layout/details_part1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <View
+                android:id="@+id/separator_1"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_below="@+id/details_part1"
+                android:background="@color/details_bg_color" />
+
+
+            <include
+                android:id="@+id/details_part2"
+                layout="@layout/details_part2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/separator_1" />
+
+
+            <View
+                android:id="@+id/separator_2"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:visibility="gone"
+                android:layout_below="@+id/details_part2"
+                android:background="@color/details_bg_color" />
+
+
+
+
+            <com.google.android.material.tabs.TabLayout
+                android:layout_width="match_parent"
+                android:id="@+id/tbLayout"
+                app:tabMode="auto"
+              android:layout_marginTop="@dimen/_2sdp"
+                android:background="@color/gray"
+                style="@style/MyCustomTabLayouttwo"
+                android:layout_below="@+id/details_part2"
+                android:layout_height="@dimen/_25sdp"/>
+
+            <com.dapl.halaladvisor.Utility.HeightWrappingViewPager
+                android:layout_width="match_parent"
+                android:id="@+id/vp"
+                android:background="@color/white"
+                android:layout_marginHorizontal="@dimen/_5sdp"
+                android:layout_marginBottom="@dimen/_20sdp"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/tbLayout"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/vp"
+                android:id="@+id/llnearBy"
+                android:background="@color/gray"
+                android:paddingHorizontal="@dimen/_10sdp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvNearBy"
+                    android:layout_marginTop="@dimen/pd_below_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_below="@+id/rlViewPager"
+                    android:paddingVertical="@dimen/_15sdp"
+                    android:text="Nearby Venues"
+                    android:textColor="@color/common_google_signin_btn_text_dark_focused"
+                    android:fontFamily="@font/bold"
+                    android:textSize="@dimen/text_11pt" />
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvNearBy"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/clIcons"
+                    app:layout_constraintTop_toBottomOf="@+id/clIcons"
+                    android:divider="@android:color/white"
+                    android:fadingEdge="none"
+                    android:scrollbars="none"
+                    tools:itemCount="2"
+                    tools:listitem="@layout/nearby_row"
+android:orientation="horizontal"
+                    android:paddingBottom="@dimen/_10sdp"
+
+                  />
+            </LinearLayout>
+
+
+            <include
+                android:id="@+id/details_address"
+                layout="@layout/details_address_new"
+                android:layout_width="match_parent"
+                android:visibility="gone"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/separator_2" />
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_60sdp"
+                android:visibility="gone"
+                android:layout_below="@id/details_address"/>
+        </RelativeLayout>
+    </androidx.core.widget.NestedScrollView>
+
+
+
+    <View
+        android:id="@+id/viewthree"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/viewFour"
+        app:layout_constraintTop_toBottomOf="@+id/nested"
+        android:background="@color/details_bg_color" />
+
+
+   
+
+    <View
+        android:id="@+id/viewFour"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:layout_marginBottom="@dimen/_1sdp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/adView"
+        android:background="@color/details_bg_color" />
+
+
+    <LinearLayout
+        android:visibility="gone"
+        android:id="@+id/ll_book_table"
+        android:layout_width="match_parent"
+        app:layout_constraintTop_toBottomOf="@+id/nested"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:background="#FFF">
+
+        <RelativeLayout
+            android:id="@+id/rr_book_table"
+            android:layout_width="@dimen/_230sdp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:background="@color/black"
+            android:visibility="visible">
+
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="20dp"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="8dp"
+                android:layout_toLeftOf="@+id/tv_book"
+                android:src="@drawable/ic_book_table" />
+
+
+            <TextView
+                android:id="@+id/tv_book"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_marginBottom="3dp"
+                android:drawablePadding="10dp"
+                android:gravity="center"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:text="Book A Table"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sz_button_text"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/regular"
+                android:text="Free Service . Instant Booking"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_12sdp"/>
+
+        </LinearLayout>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

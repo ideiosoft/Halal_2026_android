@@ -1,0 +1,71 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">14dp</dimen>
+    <dimen name="activity_vertical_margin">14dp</dimen>
+    <dimen name="fab_margin">14dp</dimen>
+    <dimen name="pd_26px">7dp</dimen>
+    <dimen name="pd_29px">8dp</dimen>
+    <dimen name="pd_31px">9dp</dimen>
+    <dimen name="pd_35px">10dp</dimen>
+    <dimen name="pd_44px">13dp</dimen>
+    <dimen name="sz_22.81px">7sp</dimen>
+    <dimen name="sz_33.33px">10sp</dimen>
+    <dimen name="sz_34.6px">11sp</dimen>
+    <dimen name="sz_37.5px">12sp</dimen>
+    <dimen name="sz_45px">13sp</dimen>
+    <dimen name="sz_50px">14sp</dimen>
+
+    <dimen name="sz_text_review_required">18sp</dimen>
+    <dimen name="sz_text_login_required">16sp</dimen>
+    <dimen name="sz_text_info_line">13sp</dimen>
+    <dimen name="sz_button_text">14sp</dimen>
+
+    <dimen name="pd_above_button">22dp</dimen>
+    <dimen name="pd_between_button">10dp</dimen>
+    <dimen name="pd_below_button">11dp</dimen>
+
+    <dimen name="pd_text_top">18dp</dimen>
+    <dimen name="pd_text">14dp</dimen>
+    <dimen name="pd_small_text_top">13dp</dimen>
+
+    <!--dimensions for login-->
+    <dimen name="registration_margin_large">18dp</dimen>
+    <dimen name="registration_margin_mid">13dp</dimen>
+    <dimen name="registration_margin_small">9dp</dimen>
+    <dimen name="sz_login_text_header">18sp</dimen>
+    <dimen name="login_cancel_margin">5dp</dimen>
+
+    <dimen name="app_base_margin_3dp">3dp</dimen>
+    <dimen name="app_base_margin_5dp">5dp</dimen>
+    <dimen name="app_base_margin_minus_5dp">-5dp</dimen>
+    <dimen name="app_base_margin_8dp">7dp</dimen>
+    <dimen name="app_base_margin_10dp">9dp</dimen>
+    <dimen name="app_base_margin_15dp">14dp</dimen>
+    <dimen name="app_base_margin_20dp">18dp</dimen>
+    <dimen name="app_base_margin_25dp">23dp</dimen>
+
+    <dimen name="details_viewpager_height">250dp</dimen>
+    <dimen name="review_image_size">45dp</dimen>
+
+    <dimen name="navigation_image_size">55dp</dimen>
+
+
+    <dimen name="ratingbar_minHeight">28dip</dimen>
+    <dimen name="ratingbar_maxHeight">28dip</dimen>
+
+    <dimen name="ratingbar_small_minHeight">15dip</dimen>
+    <dimen name="ratingbar_small_maxHeight">15dip</dimen>
+
+    <dimen name="large_text_size">22sp</dimen>
+
+    <dimen name="cancel_text_large">25sp</dimen>
+    <dimen name="search_checkbox_text">15sp</dimen>
+
+    <dimen name="text_size_20sp">20sp</dimen>
+    <dimen name="text_size_26sp">26sp</dimen>
+
+    <dimen name="profile_image_size">130dp</dimen>
+    
+
+
+</resources>

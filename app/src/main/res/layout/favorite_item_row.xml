@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/linBox"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:padding="@dimen/_10sdp">
+
+    <!-- Thumbnail Image -->
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_150sdp">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            app:cardCornerRadius="@dimen/_5sdp"
+            android:layout_marginBottom="@dimen/_5sdp"
+            android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/thumbnail"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:adjustViewBounds="true"
+            android:scaleType="fitXY"
+            android:src="@drawable/list_placeholder" />
+            <ImageView
+                android:layout_width="120dp"
+                android:id="@+id/featuredIv"
+                android:layout_gravity="bottom"
+                android:background="@drawable/featured_icon"
+                android:layout_height="25dp"/>
+        </androidx.cardview.widget.CardView>
+
+        <ImageView
+            android:id="@+id/iv_favorite"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="right"
+            android:elevation="@dimen/_2sdp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/image_heart" />
+
+
+    </FrameLayout>
+
+
+    <RelativeLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_5sdp">
+
+        <TextView
+            android:id="@+id/rowName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/cStatus"
+            android:ellipsize="end"
+            android:ems="9"
+             android:singleLine="true"
+            android:fontFamily="@font/bold"
+            android:textSize="@dimen/text_11pt"
+            android:text="@string/app_name"
+            android:textAllCaps="false"
+            android:textColor="@color/navigationBarColor"
+          />
+
+        <ImageView
+            android:id="@+id/openclose"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:visibility="gone" />
+
+
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_alignParentRight="true"
+            app:cardCornerRadius="@dimen/_3sdp"
+            android:id="@+id/cStatus"
+            android:layout_centerVertical="true"
+            android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/status"
+            android:layout_width="@dimen/_55sdp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@color/loginCancel_green"
+             android:gravity="center"
+            android:paddingTop="@dimen/_3sdp"
+            android:fontFamily="@font/med"
+            android:textSize="@dimen/text_9pt"
+            android:paddingBottom="@dimen/_3sdp"
+            android:text="OPEN"
+            android:textAllCaps="true"
+            android:textColor="@android:color/white"
+          />
+
+        </androidx.cardview.widget.CardView>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/_5sdp"
+        android:paddingBottom="@dimen/_5sdp">
+
+        <TextView
+            android:id="@+id/rowCuisineType"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ellipsize="end"
+             android:text=""
+            android:fontFamily="@font/regular"
+            android:textSize="@dimen/text_11pt"
+            android:textColor="#828486"
+             />
+
+        <TextView
+            android:id="@+id/tv_order_now"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/loginCancel_green"
+            android:drawableLeft="@drawable/oder_now"
+            android:drawablePadding="@dimen/_3sdp"
+             android:gravity="center"
+            android:paddingLeft="@dimen/_3sdp"
+            android:paddingRight="@dimen/_3sdp"
+            android:text="Order Now"
+            android:fontFamily="@font/regular"
+            android:textSize="@dimen/text_7pt"
+            android:textColor="@android:color/white"
+             />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingTop="@dimen/_5sdp"
+        android:paddingBottom="@dimen/_5sdp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center|left"
+            android:visibility="gone"
+            android:orientation="horizontal">
+
+
+            <RatingBar
+                android:id="@+id/ratingBarList"
+                style="@style/CustomRatingBarSmallGolden"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:isIndicator="true"
+                android:numStars="5"
+                android:rating="0"
+android:layout_gravity="center_vertical"
+                android:stepSize="0.1"
+                android:visibility="visible" />
+
+            <TextView
+                android:id="@+id/rating"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/_5sdp"
+                android:layout_marginRight="@dimen/_5sdp"
+                   android:textSize="@dimen/text_9pt"
+                android:fontFamily="@font/regular"
+                android:gravity="center_horizontal"
+                android:textColor="@android:color/black"
+            />
+
+            <TextView
+                android:id="@+id/numberOfVote"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                 android:gravity="center_horizontal"
+                android:fontFamily="@font/regular"
+
+                android:textSize="@dimen/text_9pt"
+                android:textColor="#AAAAAA"
+             />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center|right"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_pre_order"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:background="#ecedef"
+                 android:gravity="center_horizontal"
+                android:fontFamily="@font/regular"
+
+                android:textSize="@dimen/text_9pt"
+                android:text="Pre-Order"
+                android:visibility="gone"
+                android:textColor="#818586"
+                 />
+
+            <TextView
+                android:id="@+id/tv_pick_up"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="@dimen/_5sdp"
+                android:background="#ecedef"
+                 android:gravity="center_horizontal"
+                android:text="Pick-Up"
+                android:visibility="gone"
+                android:textColor="#818586"
+                android:fontFamily="@font/regular"
+
+                android:textSize="@dimen/text_9pt"
+                />
+
+            <TextView
+                android:id="@+id/tv_delivery"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="@dimen/_5sdp"
+                android:background="#ecedef"
+                 android:gravity="center_horizontal"
+                android:text="Delivery"
+                android:visibility="gone"
+                android:fontFamily="@font/regular"
+
+                android:textSize="@dimen/text_9pt"
+                android:textColor="#818586"
+                />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginLeft="@dimen/app_base_margin_5dp"
+        android:layout_marginTop="@dimen/app_base_margin_5dp"
+        android:layout_marginRight="@dimen/app_base_margin_3dp"
+        android:layout_marginBottom="@dimen/app_base_margin_5dp"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+
+        <TextView
+            android:id="@+id/rowAddress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:fontFamily="@font/regular"
+
+            android:textSize="@dimen/text_9pt"
+            android:ems="9"
+
+            android:maxLines="2"
+            android:text="Address- state, city"
+            android:textColor="@color/beforeLogin_text_color"
+       />
+
+
+        <TextView
+            android:id="@+id/rowCuisineTag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/regular"
+
+            android:textSize="@dimen/text_9pt"
+             android:text="CUISINES"
+            android:textColor="#8E8D8D"
+           />
+
+    </LinearLayout>
+
+
+</LinearLayout>
+
+
+
+
+

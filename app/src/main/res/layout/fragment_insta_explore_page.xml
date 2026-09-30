@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Fragment.InstaExplorePage">
+
+    <LinearLayout
+        android:id="@+id/ll_list_header"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:elevation="@dimen/_2sdp"
+        android:layout_marginBottom="2dp"
+        android:orientation="vertical">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="?actionBarSize">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="Discover"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_9pt"
+                android:textAllCaps="true"
+                android:fontFamily="@font/regular"/>
+        </RelativeLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:visibility="gone"
+            android:background="@color/loginCancel_green" />
+    </LinearLayout>
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_below="@+id/ll_list_header"
+        android:layout_height="match_parent">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:orientation="vertical">
+
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/pager"
+
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_180sdp" />
+
+        <com.github.fajaragungpramana.dotsindicator.DotsIndicator
+            android:id="@+id/dots_indicator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+             android:layout_below="@+id/pager"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="-20dp"
+            app:dotColor="@color/details_bg_color"
+            app:dotSelectedColor="@color/white"
+            app:dotSize="8dp"
+            app:dotSpacing="4dp" />
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvInsta"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/pager"
+        android:nestedScrollingEnabled="false"
+        android:paddingBottom="@dimen/_10sdp"
+        android:layout_margin="@dimen/_6sdp"
+        android:layout_marginTop="@dimen/_10sdp" />
+
+
+    </RelativeLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+
+</RelativeLayout>

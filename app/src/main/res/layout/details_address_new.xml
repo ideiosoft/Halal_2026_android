@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+      android:layout_marginHorizontal="@dimen/app_base_margin_5dp"
+    android:layout_marginTop="@dimen/_20sdp"
+    android:background="@color/details_bg_color">
+    <RelativeLayout
+        android:id="@+id/rl1_details_address"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="@color/white">
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:fillViewport="true"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+            <com.google.android.gms.maps.MapView
+                android:id="@+id/map_restaurant"
+                 android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scrollbars="none" />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="bottom"
+            android:layout_gravity="bottom"
+            android:layout_alignBottom="@+id/map_restaurant"
+            android:layout_marginHorizontal="@dimen/_15sdp"
+            android:layout_marginBottom="@dimen/_15sdp"
+            android:background="@drawable/curved_rectangle_border_no_color">
+
+            <View
+                android:id="@+id/view_line"
+                android:layout_width="match_parent"
+                android:layout_height="4dp"
+                android:layout_alignParentTop="true"
+                android:background="@color/loginCancel_green"
+                android:paddingLeft="@dimen/_4sdp"
+                android:paddingRight="@dimen/_4sdp" />
+
+            <RelativeLayout
+                android:id="@+id/navigateAddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/_15sdp">
+
+                <ImageView
+                    android:id="@+id/iv_marker"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerInParent="true"
+                    android:layout_marginRight="@dimen/_12sdp"
+                    android:src="@drawable/map_location" />
+
+                <TextView
+                    android:id="@+id/tv_address"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_toRightOf="@id/iv_marker"
+                    android:ellipsize="end"
+                    android:maxLines="2"
+                    android:text="Address"
+                    android:textColor="@color/navigationBarColor"
+                    android:textSize="@dimen/text_11pt" />
+
+                <!--<LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/iv_marker"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_address1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/navigationBarColor"
+                        android:textSize="@dimen/sz_button_text"
+                        android:text="Address "/>
+
+                    <TextView
+                        android:id="@+id/tv_address2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/navigationBarColor"
+                        android:textSize="@dimen/sz_button_text"
+                        android:text="Address "/>
+
+                </LinearLayout>-->
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+
+            </RelativeLayout>
+
+        </androidx.core.widget.NestedScrollView>
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/rl_details_photo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rl1_details_address"
+        android:layout_marginTop="@dimen/app_base_margin_5dp"
+        android:background="@color/white"
+        android:padding="@dimen/app_base_margin_5dp"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/tv_photos_tag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/app_base_margin_5dp"
+            android:text="Photos"
+            android:textColor="@color/navigationBarColor"
+            android:textSize="@dimen/sz_text_login_required" />
+
+        <RelativeLayout
+            android:id="@+id/rl_details_photo_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_photos_tag">
+
+            <HorizontalScrollView
+                android:id="@+id/horizentalScroll_details"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="none">
+
+                <LinearLayout
+                    android:id="@+id/ll_add_photo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/app_base_margin_5dp"
+                    android:layout_marginBottom="@dimen/app_base_margin_5dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                </LinearLayout>
+
+            </HorizontalScrollView>
+
+            <TextView
+                android:id="@+id/tv_details_no_photos"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:text="@string/text_no_photos"
+                android:textColor="@color/navigationBarColor"
+                android:visibility="visible" />
+
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/iv_addPhoto_details"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rl_details_photo_list"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/app_base_margin_5dp"
+            android:src="@drawable/add_a_photo" />
+
+        <View
+            android:id="@+id/iv_divider_1"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/iv_addPhoto_details"
+            android:layout_alignLeft="@+id/iv_addPhoto_details"
+            android:layout_alignRight="@+id/iv_addPhoto_details"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/app_base_margin_10dp"
+            android:background="@color/beforeLogin_text_color" />
+
+        <TextView
+            android:id="@+id/tv_seeAllPhotos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/iv_divider_1"
+            android:layout_alignRight="@+id/iv_divider_1"
+            android:layout_marginTop="@dimen/app_base_margin_5dp"
+            android:gravity="center_vertical"
+            android:text="See All Photos >"
+            android:textColor="@color/text_color_red" />
+
+    </RelativeLayout>
+
+    <include
+        android:id="@+id/details_review_content"
+        layout="@layout/details_review_new"
+        android:layout_width="match_parent"
+        android:visibility="gone"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rl_details_photo"
+        android:layout_marginTop="1dp" />
+
+    <include
+        layout="@layout/details_opening_hours_new"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:layout_below="@+id/details_review_content"
+        android:layout_marginTop="1dp" />
+
+</RelativeLayout>
